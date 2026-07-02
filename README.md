@@ -182,3 +182,38 @@ The compiled Markdown reports for each pattern are saved in the [outputs/](outpu
 * **Reflexion Loop Fix:** We tightened `should_continue` in `patterns/reflexion.py` to check for exact `PASS` responses. On iteration 1, the critic withheld approval for a data discrepancy; the agent successfully modified the draft in iteration 2 and received a `PASS` to complete the loop.
 * **Network & Consensus Success:** Successfully ran multi-turn peer-to-peer dialogues and expert consensus threat evaluations to completion.
 * **Codebase Alignment:** Corrected spelling mistakes and cleaned formatting in the repository's [implementation-plan.md](implementation-plan.md).
+
+---
+
+## 📌 Appendix: Roadmap / TODO (Gap Analysis)
+
+> **Status note:** This repository is an **MVP** — it currently proves the *architectural patterns* work end-to-end, using a paid frontier model (Anthropic Claude) against a simplified mock environment. It does **not yet** prove the project's second, arguably more important goal: that these patterns remain viable and safe when run on **low-cost, sovereign, or on-prem hardware** (e.g. Ollama-hosted open models), applied to a **genuine health / duty-of-care domain** rather than a generic dispatch simulation. The items below track that gap and are intended to be closed incrementally with GitHub Copilot's help.
+
+### 1. Provider abstraction (break the Anthropic lock-in)
+- [ ] Introduce a `shared/llm.py` factory that returns a chat model based on an `LLM_PROVIDER` env var (`anthropic`, `ollama`, `bedrock`, etc.), instead of each `patterns/*.py` file hardcoding `ChatAnthropic`.
+- [ ] Update `.env.example` with `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL` options.
+- [ ] Refactor all 8 pattern files to use the factory instead of instantiating `ChatAnthropic` directly.
+
+### 2. Cost & resource telemetry
+- [ ] Capture token usage (input/output) per LLM call and per pattern run.
+- [ ] Add estimated $ cost per run (model-price-aware) to the comparison table in `run.py`.
+- [ ] Add wall-clock latency per LLM call (not just total pattern time) to help compare local vs. hosted models.
+
+### 3. Local / sovereign model proof point
+- [ ] Run each pattern against a local Ollama model (e.g. Llama 3.1 8B, Qwen2.5) on the same incident used for the Claude runs.
+- [ ] Publish a side-by-side comparison: accuracy/safety pass-rate vs. cost vs. latency, Claude vs. local model.
+- [ ] Document a reproducible "sovereign deployment" recipe (Ollama install, model pull, air-gapped run instructions).
+
+### 4. Domain model aligned to UK health / duty-of-care
+- [ ] Replace or extend the generic fire/police/hospital dispatch simulation with a UK-relevant duty-of-care scenario (e.g. safeguarding referral triage, mental health crisis response, adult social care duty desk), using believable terminology (NHS 111/999 triage codes, NEWS2 scores, safeguarding levels).
+- [ ] Model realistic risk/priority categories and escalation thresholds relevant to duty-of-care decision-making.
+
+### 5. Safety & governance harness
+- [ ] Persist the dispatch/decision log to durable storage (file or SQLite) instead of the in-memory `dispatched_log`, so audit trails survive a run.
+- [ ] Record human-in-the-loop approvals (or `--auto-approve` bypasses) with identity/timestamp in the audit log, rather than silently skipping.
+- [ ] Add a documented data-handling/PII stance given the health-adjacent domain.
+
+### 6. Open-source hygiene
+- [ ] Add a `LICENSE` file (MIT/Apache-2.0) at the repo root.
+- [ ] Add an "Ethics & Safety" section to this README describing the humanitarian intent, data-handling stance, and limitations of this MVP.
+
