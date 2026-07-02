@@ -2,33 +2,37 @@
 
 ## Context
 
-Product owners and solution architects often face confusion regarding:
+Product owners and solution architects are often confused about agents, agentic patterns, and the best use cases for GenAI.
 
-1. **Agent vs. Workflow/RAG Integration:** Whether a specific use case warrants building an autonomous agent, or if it simply requires tools and resources to augment information (RAG) or coordinate existing tools through schemas like MCP (Model Context Protocol).
-   - **Autonomous Scope:** Agents operate autonomously with a defined goal, a specific role, and operational context (backstory).
-   - **Workflow Understanding:** It is crucial to trace the end-to-end operational workflow. For example, in emergency services, what happens when a distress call is received? What information is needed at each step, and where are the primary bottlenecks?
-   - **System Switching & Overhead:** Analyze how many different systems an operator has to switch between to complete a task. (e.g., In the UK, a 999 operator triages the service—Police, Fire, or Ambulance—identifies the location automatically or manually, and handles dispatch interfaces. Some interfaces might be slow or prone to failure).
-2. **Topology Selection:** Once an agentic solution is justified, deciding which specific agentic pattern/topology fits the operational domain best.
+The concerns in this context are related to:
+
+1. **Agent vs. Workflow/RAG integration:** Whether a specific use case warrants building an autonomous agent, or whether it simply requires tools and resources to augment information (RAG) or to coordinate existing tools through schemas like MCP (Model Context Protocol).
+   - **Autonomous scope:** Agents operate autonomously with a defined goal, a specific role, and an operational context (backstory).
+   - **Workflow understanding:** It is crucial to trace the end-to-end operational workflow. For example, in emergency services, what happens when a distress call is received? What information is needed at each step, and where are the primary bottlenecks?
+   - **System switching and overhead:** Analyse how many different systems an operator has to switch between to complete a task. (For example, in the UK, a 999 operator triages the service — Police, Fire, or Ambulance — identifies the location automatically or manually, and handles dispatch interfaces. Some interfaces may be slow or prone to failure.)
+2. **Topology selection:** Once an agentic solution is justified, decide which specific agentic pattern/topology fits the operational domain best.
 
 ## Goal
 
 The goal of this project is twofold:
 
-1. **Implement and Map Topologies:**
-   - **Single-Agent Patterns:**
+1. **Implement and map topologies:**
+   - **Single-agent patterns:**
      - **ReAct** — Reason + Act loop (tool calls interleaved with reasoning).
-     - **Plan-and-Execute** — Separating the planning phase from the execution phase.
-     - **ReWOO** (Reason Without Observation) — Planning all tool calls upfront and executing them in batch.
-     - **Reflexion** — Self-critique and iterative self-improvement loops.
-   - **Multi-Agent Topologies:**
-     - **Hierarchical** — Orchestrator delegates tasks to specialized sub-agents.
-     - **Acyclic / DAG** — A directed pipeline of specialized nodes with no feedback loops.
+     - **Plan-and-Execute** — separating the planning phase from the execution phase.
+     - **ReWOO** (Reason Without Observation) — planning all tool calls upfront and executing them in batch.
+     - **Reflexion** — self-critique and iterative self-improvement loops.
+   - **Multi-agent topologies:**
+     - **Hierarchical** — Orchestrator delegates tasks to specialised sub-agents.
+     - **Acyclic / DAG** — A directed pipeline of specialised nodes with no feedback loops.
      - **Network (Peer-to-Peer)** — Agents communicating laterally without a central manager.
-2. **Demonstrate Use Cases & Core Tasks:**
-   - **Consensus / Joint Debate** — Multiple specialist agents debate and converge on a unified evaluation.
-   - **Common Tasks Demonstrated** — External API queries, stateful databases, and human-in-the-loop validation.
+2. **Demonstrate use cases & core tasks:**
+   - **Consensus / Joint Debate** — multiple specialist agents debate and converge on a unified evaluation.
+   - **Common tasks demonstrated** — external API queries, stateful databases, and human-in-the-loop validation.
 
 To make these patterns relatable and impactful, they are implemented within the domain of **Emergency Dispatch & Incident Coordination** (handling fire suppression, medical triage, traffic routing, and risk management).
+
+A UK emergency response scenario is used as the reference here.
 
 ## Agentic Patterns: Emergency Response & Disaster Dispatch
 
@@ -47,9 +51,9 @@ Each pattern coordinates resources (Fire, Medical, Police) in a stateful mock en
 4. **Reflexion**: A generator agent proposes a dispatch plan, which a critic agent evaluates against strict protocols. The plan is iteratively refined based on critique until it passes safety checks (`patterns/reflexion.py`).
 
 #### Multi-Agent Topologies
-5. **Hierarchical**: An Incident Commander (Supervisor) coordinates the operation by delegating specific issues to specialized Fire, Medical, and Police sub-agents who execute tools and report back (`patterns/hierarchical.py`).
-6. **Acyclic / DAG**: A unidirectional pipeline of specialized agents (Triage ──► Resource Allocation ──► Traffic Coordinator ──► Compiler) without loops (`patterns/dag.py`).
-7. **Network (Peer-to-Peer)**: Specialized agents (Fire Chief, Police Chief, Medical Chief) negotiate coordinates and assets laterally in a conversational loop without central orchestrator oversight (`patterns/network.py`).
+5. **Hierarchical**: An Incident Commander (Supervisor) coordinates the operation by delegating specific issues to specialised Fire, Medical, and Police sub-agents who execute tools and report back (`patterns/hierarchical.py`).
+6. **Acyclic / DAG**: A unidirectional pipeline of specialised agents (Triage ──► Resource Allocation ──► Traffic Coordinator ──► Compiler) without loops (`patterns/dag.py`).
+7. **Network (Peer-to-Peer)**: Specialised agents (Fire Chief, Police Chief, Medical Chief) negotiate coordinates and assets laterally in a conversational loop without central orchestrator oversight (`patterns/network.py`).
 8. **Consensus / Joint**: Three independent experts (Threat Analyst, Resource Chief, Public Safety Liaison) evaluate risk severity and debate their scores until they reach consensus or average agreement (`patterns/consensus.py`).
 
 ---
