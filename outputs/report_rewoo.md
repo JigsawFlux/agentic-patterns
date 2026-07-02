@@ -1,7 +1,7 @@
 # 🚨 Emergency Response Operation Report
 
 **Incident ID:** OPS-2024-0045
-**Location:** 45 Pine St (WC1A Bloomsbury, London)
+**Location:** 45 Pine Street (WC1A Bloomsbury, London)
 **Incident Type:** 3-Story Building Fire with Smoke Inhalation Casualties & Traffic Gridlock
 **Report Compiled By:** Emergency Response Coordinator
 **Status:** Active Response Underway
@@ -10,34 +10,34 @@
 
 ## 📋 Incident Overview
 
-A 3-story building fire was reported at **45 Pine St (WC1A Bloomsbury, London)**. The incident involves:
+A 3-story building fire was reported at **45 Pine Street (WC1A Bloomsbury, London)**. The incident involves:
 - Active structural fire requiring immediate suppression
 - Multiple smoke inhalation casualties requiring medical triage and transport
-- Severe traffic gridlock in the surrounding downtown area, particularly around **Main St.**
+- Severe traffic gridlock in the surrounding downtown area, particularly around **Main Street.**
 
 ---
 
 ## ✅ Successfully Dispatched Resources
 
-### 🔥 Fire Services — 45 Pine St (WC1A Bloomsbury, London)
+### 🔥 Fire Services — 45 Pine Street (WC1A Bloomsbury, London)
 
 | Vehicle Type | Units Dispatched | Units Remaining |
 |---|---|---|
-| Fire Engine | 3 | 2 |
+| Fire engine | 3 | 2 |
 
-- **3 Fire Engines** have been successfully dispatched to combat the active blaze.
+- **3 Fire engines** have been successfully dispatched to combat the active blaze.
 - Engines will establish water supply, initiate suppression operations, and support structural access.
 
 ---
 
-### 🚑 Medical Services — 45 Pine St (WC1A Bloomsbury, London)
+### 🚑 Medical Services — 45 Pine Street (WC1A Bloomsbury, London)
 
 | Vehicle Type | Units Dispatched | Units Remaining |
 |---|---|---|
 | Ambulance | 4 | 2 |
 
 - **4 Ambulances** have been successfully dispatched to triage and transport smoke inhalation casualties.
-- 4 **Paramedic Fly-Cars** remain on standby and are available for immediate escalation if casualty numbers increase.
+- 4 **Rapid Response Vehicles (RRVs)** remain on standby and are available for immediate escalation if casualty numbers increase.
 
 ---
 
@@ -60,15 +60,15 @@ Based on the hospital capacity query (Step E5), the following routing is recomme
 
 ## ⚠️ Dispatch Failures — Immediate Action Required
 
-### ❌ E7: Ladder Truck Dispatch — FAILED
+### ❌ E7: aerial appliance Dispatch — FAILED
 
-> **Error:** Vehicle type `'Ladder Truck'` not found in Fire service inventory.
-> **Valid Fire Types:** Fire Engine, Hazmat Truck, Rescue Squad
+> **Error:** Vehicle type `'aerial appliance'` not found in Fire service inventory.
+> **Valid Fire Types:** Fire engine, hazardous materials Truck, Rescue Unit
 
 **Impact:** A 3-story building fire presents significant vertical rescue challenges. The absence of a dispatched ladder/aerial unit is a **critical operational gap**.
 
 **Recommended Corrective Action:**
-- Immediately dispatch **1 Rescue Squad** (3 available per E1) to support upper-floor rescue operations.
+- Immediately dispatch **1 Rescue Unit** (3 available per E1) to support upper-floor rescue operations.
 - Contact mutual aid partners or neighboring jurisdictions to request a **ladder/aerial truck** if vertical access is required.
 
 ---
@@ -76,13 +76,13 @@ Based on the hospital capacity query (Step E5), the following routing is recomme
 ### ❌ E9: Police Patrol Car Dispatch — FAILED
 
 > **Error:** Vehicle type `'Patrol Car'` not found in Police service inventory.
-> **Valid Police Types:** Cruiser, Traffic Unit, Tactical Van
+> **Valid Police Types:** patrol car, Traffic patrol, Tactical Van
 
-**Impact:** No police units have been deployed yet. With confirmed **high traffic density around Main St.**, this is an urgent gap in perimeter and crowd control.
+**Impact:** No police units have been deployed yet. With confirmed **high traffic density around Main Street.**, this is an urgent gap in perimeter and crowd control.
 
 **Recommended Corrective Action:**
-- Immediately dispatch **Police Cruisers** for scene perimeter and crowd control (10 available per E3).
-- Immediately dispatch **Traffic Units** to manage the Main St. gridlock and establish clear emergency vehicle corridors (5 available per E3).
+- Immediately dispatch **Police patrol cars** for scene perimeter and crowd control (10 available per E3).
+- Immediately dispatch **Traffic patrols** to manage the Main Street. gridlock and establish clear emergency vehicle corridors (5 available per E3).
 
 ---
 
@@ -90,10 +90,10 @@ Based on the hospital capacity query (Step E5), the following routing is recomme
 
 | Hazard Type | Details | Severity |
 |---|---|---|
-| Traffic Congestion | High traffic density reported around **Main St., Downtown** | 🔴 High |
+| Traffic Congestion | High traffic density reported around **Main Street., city centre** | 🔴 High |
 | Weather | No adverse weather conditions reported | 🟢 Low |
 
-**Traffic Mitigation Priority:** Emergency vehicle access routes to 45 Pine St (WC1A Bloomsbury, London) must be cleared immediately. Traffic Units should establish a dedicated ingress/egress corridor, particularly along Main St., to prevent delays for incoming fire engines, ambulances, and any additional units.
+**Traffic Mitigation Priority:** Emergency vehicle access routes to 45 Pine Street (WC1A Bloomsbury, London) must be cleared immediately. Traffic patrols should establish a dedicated ingress/egress corridor, particularly along Main Street., to prevent delays for incoming fire engines, ambulances, and any additional units.
 
 ---
 
@@ -102,21 +102,21 @@ Based on the hospital capacity query (Step E5), the following routing is recomme
 ### Fire Department
 | Vehicle | Available | Total | Status |
 |---|---|---|---|
-| Fire Engine | 2 *(post-dispatch)* | 8 | Ready |
-| Hazmat Truck | 2 | 3 | Ready — **Standby** |
-| Rescue Squad | 3 | 4 | Ready — **Deploy Immediately** |
+| Fire engine | 2 *(post-dispatch)* | 8 | Ready |
+| hazardous materials Truck | 2 | 3 | Ready — **Standby** |
+| Rescue Unit | 3 | 4 | Ready — **Deploy Immediately** |
 
 ### Medical Services
 | Vehicle | Available | Total | Status |
 |---|---|---|---|
 | Ambulance | 2 *(post-dispatch)* | 12 | Ready — Standby |
-| Paramedic Fly-Car | 4 | 5 | Ready — **Standby** |
+| Rapid Response Vehicle (RRV) | 4 | 5 | Ready — **Standby** |
 
 ### Police Department
 | Vehicle | Available | Total | Status |
 |---|---|---|---|
-| Cruiser | 10 | 15 | Ready — **Deploy Immediately** |
-| Traffic Unit | 5 | 6 | Ready — **Deploy Immediately** |
+| patrol car | 10 | 15 | Ready — **Deploy Immediately** |
+| Traffic patrol | 5 | 6 | Ready — **Deploy Immediately** |
 | Tactical Van | 2 | 3 | Ready — Standby |
 
 ---
@@ -125,22 +125,23 @@ Based on the hospital capacity query (Step E5), the following routing is recomme
 
 | Priority | Action | Responsible Unit |
 |---|---|---|
-| 🔴 CRITICAL | Dispatch **1 Rescue Squad** for upper-floor rescue at 45 Pine St (WC1A Bloomsbury, London) | Fire Command |
-| 🔴 CRITICAL | Dispatch **Police Cruisers** for scene perimeter control | Police Dispatch |
-| 🔴 CRITICAL | Dispatch **Traffic Units** to clear Main St. corridor | Police Traffic Division |
+| 🔴 CRITICAL | Dispatch **1 Rescue Unit** for upper-floor rescue at 45 Pine Street (WC1A Bloomsbury, London) | Fire Command |
+| 🔴 CRITICAL | Dispatch **Police patrol cars** for scene perimeter control | Police Dispatch |
+| 🔴 CRITICAL | Dispatch **Traffic patrols** to clear Main Street. corridor | Police Traffic Division |
 | 🟠 HIGH | Notify **Mercy General** to prepare for incoming smoke inhalation casualties | Medical Coordinator |
 | 🟠 HIGH | Notify **County Community Hospital** as secondary overflow destination | Medical Coordinator |
 | 🟠 HIGH | Alert **St. Jude Medical** burn unit to standby for potential burn cases | Medical Coordinator |
-| 🟡 MEDIUM | Evaluate need for **Hazmat Truck** deployment if fire involves hazardous materials | Fire Command |
-| 🟡 MEDIUM | Stage **2 remaining Ambulances** and **4 Paramedic Fly-Cars** for casualty escalation | Medical Dispatch |
-| 🟢 ONGOING | Monitor fire progression and reassess need for additional Fire Engines | Incident Commander |
+| 🟡 MEDIUM | Evaluate need for **hazardous materials Truck** deployment if fire involves hazardous materials | Fire Command |
+| 🟡 MEDIUM | Stage **2 remaining Ambulances** and **4 Rapid Response Vehicles (RRVs)** for casualty escalation | Medical Dispatch |
+| 🟢 ONGOING | Monitor fire progression and reassess need for additional Fire engines | Incident Commander |
 
 ---
 
 ## 📝 Coordinator Notes
 
-> Two dispatch failures occurred due to **invalid vehicle type names** (`Ladder Truck`, `Patrol Car`) that do not exist in the current resource management system. Dispatch protocols should be updated to reflect verified vehicle type nomenclature to prevent critical delays in future operations. The absence of a ladder/aerial capability in the Fire inventory should be flagged for **fleet review** given the frequency of multi-story incidents in the downtown area.
+> Two dispatch failures occurred due to **invalid vehicle type names** (`aerial appliance`, `Patrol Car`) that do not exist in the current resource management system. Dispatch protocols should be updated to reflect verified vehicle type nomenclature to prevent critical delays in future operations. The absence of a ladder/aerial capability in the Fire inventory should be flagged for **fleet review** given the frequency of multi-story incidents in the downtown area.
 
 ---
 
 *Report generated upon completion of initial dispatch phase. All units should report on-scene status to Incident Command upon arrival. Next situation report due in 15 minutes.*
+

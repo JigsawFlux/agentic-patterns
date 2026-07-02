@@ -1,5 +1,5 @@
 # 🚨 EMERGENCY CONSENSUS EVALUATION REPORT
-## Incident: Structure Fire — 45 Pine St (WC1A Bloomsbury, London)
+## Incident: Structure Fire — 45 Pine Street (WC1A Bloomsbury, London)
 ### Report Compiled by: Emergency Consensus Liaison
 ### Classification: HIGH PRIORITY — ACTIVE INCIDENT
 
@@ -46,7 +46,7 @@ The Threat Analyst assessed this incident as a **high-severity, rapidly evolving
 The Resource Chief evaluated current deployment capacity against incident demands and identified **significant logistical pressure points**:
 
 - **Heavy traffic gridlock** in the downtown corridor is critically impeding apparatus response times, requiring immediate traffic management intervention and potential route pre-clearing by law enforcement
-- **Multiple simultaneous resource demands** are anticipated: fire suppression units, aerial ladder apparatus for upper-floor access, EMS units for smoke inhalation casualties, and hazmat standby
+- **Multiple simultaneous resource demands** are anticipated: fire suppression units, aerial appliance for upper-floor access, Ambulance Service units for smoke inhalation casualties, and hazardous materials standby
 - **Mutual aid triggers** should be considered proactively given the 3-story structure and confirmed casualties — waiting for conditions to worsen before requesting mutual aid risks a resource gap during the critical suppression window
 - Hospital notification and trauma center coordination are recommended given confirmed smoke inhalation victims, with potential for additional casualties as evacuation proceeds
 - The Resource Chief noted that **downtown deployment logistics are inherently constrained** by street width, parking infrastructure, and pedestrian density, and that staging areas must be established immediately to prevent apparatus gridlock
@@ -76,12 +76,12 @@ The Public Safety Liaison evaluated the incident through the lens of civilian we
 
 | Priority | Action | Responsible Unit |
 |----------|--------|-----------------|
-| 🔴 CRITICAL | Dispatch minimum 3 engine companies + 1 aerial ladder to 45 Pine St (WC1A Bloomsbury, London) | Fire Command |
-| 🔴 CRITICAL | Dispatch 2+ ALS EMS units for confirmed smoke inhalation casualties | EMS Command |
+| 🔴 CRITICAL | Dispatch minimum 3 engine companies + 1 aerial ladder to 45 Pine Street (WC1A Bloomsbury, London) | Fire Command |
+| 🔴 CRITICAL | Dispatch 2+ ALS Ambulance Service units for confirmed smoke inhalation casualties | Ambulance Service Command |
 | 🔴 CRITICAL | Activate traffic corridor clearance on all primary approach routes | Law Enforcement |
 | 🔴 CRITICAL | Establish Incident Command Post (ICP) at safe perimeter distance | Incident Commander |
-| 🟠 HIGH | Initiate full building evacuation — 45 Pine St (WC1A Bloomsbury, London) and immediately adjacent structures | Fire/Law Enforcement |
-| 🟠 HIGH | Notify nearest trauma center(s) of incoming smoke inhalation casualties | EMS Command |
+| 🟠 HIGH | Initiate full building evacuation — 45 Pine Street (WC1A Bloomsbury, London) and immediately adjacent structures | Fire/Law Enforcement |
+| 🟠 HIGH | Notify nearest trauma center(s) of incoming smoke inhalation casualties | Ambulance Service Command |
 | 🟠 HIGH | Activate public emergency alert — traffic rerouting and area avoidance advisory | Public Safety Liaison |
 
 ---
@@ -91,12 +91,12 @@ The Public Safety Liaison evaluated the incident through the lens of civilian we
 | Priority | Action | Responsible Unit |
 |----------|--------|-----------------|
 | 🔴 CRITICAL | Conduct structural integrity assessment — determine interior vs. defensive attack posture | Fire Command / Safety Officer |
-| 🔴 CRITICAL | Establish dedicated EMS triage and treatment sector away from fire perimeter | EMS Sector Commander |
+| 🔴 CRITICAL | Establish dedicated Ambulance Service triage and treatment sector away from fire perimeter | Ambulance Service Sector Commander |
 | 🟠 HIGH | Pre-position mutual aid request — activate neighboring jurisdiction standby | Resource Chief |
 | 🟠 HIGH | Deploy utility company liaison — gas and electrical shutoff coordination | Incident Commander |
 | 🟠 HIGH | Establish civilian reunification point and public information station | Public Safety Liaison |
 | 🟡 MODERATE | Conduct secondary search of adjacent buildings for exposure casualties | Fire Search Teams |
-| 🟡 MODERATE | Activate hazmat unit on standby — unknown building contents | Hazmat Unit |
+| 🟡 MODERATE | Activate hazardous materials unit on standby — unknown building contents | hazardous materials Unit |
 
 ---
 
@@ -133,7 +133,7 @@ The following conditions, if confirmed, will trigger **immediate escalation** to
 
 > **🤝 Mutual Aid:** Do not delay mutual aid request pending confirmation of need. Pre-position mutual aid assets at staging area. Release if not needed — do not request after the critical window has passed.
 
-> **📰 Media & Public:** A designated Public Information Officer (PIO) should be activated immediately. Downtown incidents attract significant media attention. Proactive, accurate communication prevents misinformation and supports civilian compliance with evacuation and rerouting directives.
+> **📰 Media & Public:** A designated Public Information Officer (PIO) should be activated immediately. city centre incidents attract significant media attention. Proactive, accurate communication prevents misinformation and supports civilian compliance with evacuation and rerouting directives.
 
 ---
 
@@ -148,9 +148,10 @@ The following conditions, if confirmed, will trigger **immediate escalation** to
 
 ---
 
-*Report compiled and ratified by the Emergency Consensus Liaison. This document is to be transmitted immediately to the Incident Commander, Emergency Operations Center (EOC), and all responding agency supervisors. All tactical decisions remain subject to real-time field assessment by the Incident Commander.*
+*Report compiled and ratified by the Emergency Consensus Liaison. This document is to be transmitted immediately to the Incident Commander, Emergency Operations Centre (EOC), and all responding agency supervisors. All tactical decisions remain subject to real-time field assessment by the Incident Commander.*
 
 ---
 *🕐 Report Timestamp: Active Incident — Immediate Distribution Required*
-*📍 Location: 45 Pine St (WC1A Bloomsbury, London) District*
+*📍 Location: 45 Pine Street (WC1A Bloomsbury, London) District*
 *📁 Classification: HIGH PRIORITY — ACTIVE INCIDENT RESPONSE*
+

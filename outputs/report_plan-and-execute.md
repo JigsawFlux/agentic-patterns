@@ -1,5 +1,5 @@
 # 🚨 EMERGENCY RESPONSE DEPLOYMENT REPORT
-## Incident INC-20250001 | 3-Story Structure Fire — 45 Pine St (WC1A Bloomsbury, London)
+## Incident INC-20250001 | 3-Story Structure Fire — 45 Pine Street (WC1A Bloomsbury, London)
 
 ---
 
@@ -15,17 +15,17 @@
 |---|---|
 | **Incident ID** | INC-20250001 |
 | **Incident Type** | Structure Fire — 3-Story Building |
-| **Location** | 45 Pine St (WC1A Bloomsbury, London) Area |
+| **Location** | 45 Pine Street (WC1A Bloomsbury, London) Area |
 | **Confirmed Hazards** | Active building fire · Smoke inhalation casualties · Heavy traffic gridlock |
 | **Life Safety Threat** | ⚠️ HIGH — Casualties confirmed with smoke inhalation injuries |
-| **Traffic Impact** | ⚠️ HIGH — Heavy gridlock confirmed on Main St and surrounding Downtown corridors |
-| **Incident Commander** | Fire Battalion Chief — Unified Command Post, Oak Ave & Pine St (NW Corner) |
+| **Traffic Impact** | ⚠️ HIGH — Heavy gridlock confirmed on Main Street and surrounding city centre corridors |
+| **Incident Commander** | Fire Battalion Chief — Unified Command Post, Oak Avenue & Pine Street (NW Corner) |
 | **EOC Activation Level** | 🔴 Level 1 — Full Multi-Agency Activation |
 | **EOC Location** | City Emergency Management Building — 100 Civic Center Dr, Floor 3 |
 
 ### 1.1 Incident Summary
 
-At the time of report, an active 3-story structure fire was confirmed at **45 Pine St (WC1A Bloomsbury, London) in the Downtown area**, presenting a high-priority, multi-dimensional emergency involving simultaneous fire suppression requirements, confirmed smoke inhalation casualties, and severe traffic gridlock impeding emergency vehicle access. A full multi-agency response was immediately initiated, encompassing Fire, EMS, Police, Hazmat, utility services, hospital networks, and the Emergency Operations Center. All 23 response steps were executed in sequence, resulting in 13 units deployed across three agencies with 24 units held in reserve for escalation.
+At the time of report, an active 3-story structure fire was confirmed at **45 Pine Street (WC1A Bloomsbury, London) in the city centre area**, presenting a high-priority, multi-dimensional emergency involving simultaneous fire suppression requirements, confirmed smoke inhalation casualties, and severe traffic gridlock impeding emergency vehicle access. A full multi-agency response was immediately initiated, encompassing Fire, Ambulance Service, Police, hazardous materials, utility services, hospital networks, and the Emergency Operations Centre. All 23 response steps were executed in sequence, resulting in 13 units deployed across three agencies with 24 units held in reserve for escalation.
 
 ---
 
@@ -37,58 +37,58 @@ Pre-dispatch availability checks confirmed the following resources were ready fo
 
 | Unit Type | Available | Total Fleet | Status |
 |---|---|---|---|
-| Fire Engine | 5 | 8 | ✅ Ready |
-| Rescue Squad | 3 | 4 | ✅ Ready |
-| Hazmat Truck | 2 | 3 | ✅ Ready |
+| Fire engine | 5 | 8 | ✅ Ready |
+| Rescue Unit | 3 | 4 | ✅ Ready |
+| hazardous materials Truck | 2 | 3 | ✅ Ready |
 
-### 2.2 Medical / EMS Availability
+### 2.2 Medical / Ambulance Service Availability
 
 | Unit Type | Available | Total Fleet | Status |
 |---|---|---|---|
 | Ambulance | 6 | 12 | ✅ Ready |
-| Paramedic Fly-Car | 4 | 5 | ✅ Ready |
+| Rapid Response Vehicle (RRV) | 4 | 5 | ✅ Ready |
 
 ### 2.3 Police Department Availability
 
 | Unit Type | Available | Total Fleet | Status |
 |---|---|---|---|
-| Cruiser | 10 | 15 | ✅ Ready |
-| Traffic Unit | 5 | 6 | ✅ Ready |
+| patrol car | 10 | 15 | ✅ Ready |
+| Traffic patrol | 5 | 6 | ✅ Ready |
 | Tactical Van | 2 | 3 | ✅ Ready |
 
 ---
 
 ## SECTION 3 — RESPONDER ASSETS DISPATCHED
 
-A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units** were retained in reserve to support potential escalation.
+A total of **13 units** were dispatched across Fire, Ambulance Service, and Police. **24 units** were retained in reserve to support potential escalation.
 
 ### 3.1 Fire Department Deployments
 
 | Unit | Quantity Dispatched | Assignment | Remaining in Reserve |
 |---|---|---|---|
-| Fire Engine | 3 | Active fire suppression — 45 Pine St (WC1A Bloomsbury, London) | 2 |
-| Rescue Squad | 1 | Upper-floor search & rescue operations | 2 |
-| Hazmat Truck | 1 | Chemical and structural hazard assessment | 1 |
+| Fire engine | 3 | Active fire suppression — 45 Pine Street (WC1A Bloomsbury, London) | 2 |
+| Rescue Unit | 1 | Upper-floor search & rescue operations | 2 |
+| hazardous materials Truck | 1 | Chemical and structural hazard assessment | 1 |
 | **Fire Total** | **5** | | **5** |
 
-> **Approach Route — All Fire Units:** Oak Ave or Elm St → Cedar Blvd corridor. ❌ Main St is prohibited due to confirmed gridlock.
+> **Approach Route — All Fire Units:** Oak Avenue or Elm St → Cedar Blvd corridor. ❌ Main Street is prohibited due to confirmed gridlock.
 
-### 3.2 Medical / EMS Deployments
+### 3.2 Medical / Ambulance Service Deployments
 
 | Unit | Quantity Dispatched | Assignment | Remaining in Reserve |
 |---|---|---|---|
-| Ambulance | 3 | Smoke inhalation casualty response — 45 Pine St (WC1A Bloomsbury, London) | 3 |
-| Paramedic Fly-Car | 1 | Mass casualty precautionary response | 3 |
-| **EMS Total** | **4** | | **6** |
+| Ambulance | 3 | Smoke inhalation casualty response — 45 Pine Street (WC1A Bloomsbury, London) | 3 |
+| Rapid Response Vehicle (RRV) | 1 | Mass casualty precautionary response | 3 |
+| **Ambulance Service Total** | **4** | | **6** |
 
-> **Approach Route — All EMS Units:** Oak Ave → Riverside Dr (primary). Elm St → Cedar Blvd (secondary). ❌ Main St is prohibited.
+> **Approach Route — All Ambulance Service Units:** Oak Avenue → Riverside Dr (primary). Elm St → Cedar Blvd (secondary). ❌ Main Street is prohibited.
 
 ### 3.3 Police Deployments
 
 | Unit | Quantity Dispatched | Assignment | Remaining in Reserve |
 |---|---|---|---|
-| Traffic Unit | 2 | Main St corridor — traffic gridlock management | 3 |
-| Cruiser | 2 | Scene perimeter establishment and crowd control | 8 |
+| Traffic patrol | 2 | Main Street corridor — traffic gridlock management | 3 |
+| patrol car | 2 | Scene perimeter establishment and crowd control | 8 |
 | **Police Total** | **4** | | **13** |
 
 ### 3.4 Grand Deployment Summary
@@ -96,7 +96,7 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 | Agency | Units Dispatched | Units in Reserve |
 |---|---|---|
 | 🔥 Fire Department | 5 | 5 |
-| 🚑 Medical / EMS | 4 | 6 |
+| 🚑 Medical / Ambulance Service | 4 | 6 |
 | 🚔 Police Department | 4 | 13 |
 | **TOTAL** | **13** | **24** |
 
@@ -108,7 +108,7 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 
 | Field | Details |
 |---|---|
-| **Location** | Oak Ave & Pine St Intersection — Northwest Corner |
+| **Location** | Oak Avenue & Pine Street Intersection — Northwest Corner |
 | **Distance from Structure** | ~150 ft — outside collapse zone |
 | **Wind Orientation** | Upwind — smoke and fire gases directed away from command post |
 | **Incident Commander** | Fire Battalion Chief |
@@ -118,31 +118,31 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 | Role | Agency |
 |---|---|
 | 🔴 Incident Commander (IC) | Fire Department — Battalion Chief |
-| 🔵 EMS Branch Director | Medical / EMS — Senior Paramedic |
+| 🔵 Ambulance Service Branch Director | Medical / Ambulance Service — Senior Paramedic |
 | 🟡 Law Enforcement Branch Director | Police Department — Senior Officer |
-| 🟠 Hazmat Branch Director | Fire / Hazmat — Hazmat Truck Commander |
+| 🟠 hazardous materials Branch Director | Fire / hazardous materials — hazardous materials Truck Commander |
 | 🟢 Utility Liaison | Gas & Electric — Utility Crew Leads |
 
 ### 4.3 Scene Zone Designations
 
 | Zone | Location | Access |
 |---|---|---|
-| 🔴 Hot Zone | Interior of 45 Pine St (WC1A Bloomsbury, London) | Fire crews only — active suppression |
-| 🟠 Warm Zone | ~50 ft perimeter around structure | Rescue Squad, Hazmat, triage staging |
-| 🟡 Cold Zone / Triage | Pine St — south side of structure | EMS casualty treatment and ambulance staging |
-| 🟢 Command Post | Oak Ave & Pine St — NW corner | Unified Command — all branch directors |
-| 🔵 Staging Area | Cedar Blvd — 1 block west of Pine St | Reserve units, utility crews, additional resources |
-| 🚔 Traffic Control Points | Main St at Pine St · Oak Ave at Pine St | Police Traffic Units — gridlock management |
+| 🔴 Hot Zone | Interior of 45 Pine Street (WC1A Bloomsbury, London) | Fire crews only — active suppression |
+| 🟠 Warm Zone | ~50 ft perimeter around structure | Rescue Unit, hazardous materials, triage staging |
+| 🟡 Cold Zone / Triage | Pine Street — south side of structure | Ambulance Service casualty treatment and ambulance staging |
+| 🟢 Command Post | Oak Avenue & Pine Street — NW corner | Unified Command — all branch directors |
+| 🔵 Staging Area | Cedar Blvd — 1 block west of Pine Street | Reserve units, utility crews, additional resources |
+| 🚔 Traffic Control Points | Main Street at Pine Street · Oak Avenue at Pine Street | Police Traffic patrols — gridlock management |
 
 ### 4.4 Radio Channel Assignments
 
 | Channel | Assignment | Units |
 |---|---|---|
 | Channel 1 — Command | Unified Command — IC ↔ EOC | Battalion Chief, EOC Director, Branch Directors |
-| Channel 2 — Fire Ops | Fire suppression and rescue | 3 Fire Engines, 1 Rescue Squad, 1 Hazmat Truck |
-| Channel 3 — EMS | Triage, treatment, hospital transport | 3 Ambulances, 1 Paramedic Fly-Car |
-| Channel 4 — Police | Perimeter, crowd control, traffic | 2 Cruisers, 2 Traffic Units |
-| Channel 5 — Hazmat | Hazard assessment, utility coordination | Hazmat Truck, Gas & Electric crews |
+| Channel 2 — Fire Ops | Fire suppression and rescue | 3 Fire engines, 1 Rescue Unit, 1 hazardous materials Truck |
+| Channel 3 — Ambulance Service | Triage, treatment, hospital transport | 3 Ambulances, 1 Rapid Response Vehicle (RRV) |
+| Channel 4 — Police | Perimeter, crowd control, traffic | 2 patrol cars, 2 Traffic patrols |
+| Channel 5 — hazardous materials | Hazard assessment, utility coordination | hazardous materials Truck, Gas & Electric crews |
 
 ---
 
@@ -164,7 +164,7 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 | **Destination** | Mercy General |
 | **Rationale** | Closest trauma-capable facility at 3.5 mi · 12 available beds · Cardiology on standby for cardiac complications |
 | **Transport Units** | Ambulances 1, 2, 3 |
-| **Approved Route** | Oak Ave → Riverside Dr → Mercy General ❌ Avoid Main St |
+| **Approved Route** | Oak Avenue → Riverside Dr → Mercy General ❌ Avoid Main Street |
 | **Pre-Notification** | ✅ Issued — Respiratory therapy and pulmonology standby requested |
 
 #### 🔥 Category 2 — Burn-Related Casualties
@@ -172,8 +172,8 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 |---|---|
 | **Destination** | St. Jude Medical |
 | **Rationale** | Only facility with a dedicated Burn Unit · Trauma Center capable · Pediatrics available if child casualties identified |
-| **Transport Units** | Paramedic Fly-Car (primary assessment) · Ambulance redirect if burn casualties confirmed |
-| **Approved Route** | Elm St → Cedar Blvd → Highway connector → St. Jude Medical ❌ Avoid Main St |
+| **Transport Units** | Rapid Response Vehicle (RRV) (primary assessment) · Ambulance redirect if burn casualties confirmed |
+| **Approved Route** | Elm St → Cedar Blvd → Highway connector → St. Jude Medical ❌ Avoid Main Street |
 | **Pre-Notification** | ✅ Issued — Burn team and OR standby requested |
 | **⚠️ Capacity Advisory** | Only 4 beds available — EOC Hospital Liaison monitoring; regional burn diversion protocol on standby |
 
@@ -183,7 +183,7 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 | **Destination** | County Community |
 | **Rationale** | Largest available bed capacity at 25 beds · Appropriate for non-critical, ambulatory, and walking-wounded patients |
 | **Transport Units** | Reserve Ambulances (3 available) — deploy as casualty count grows |
-| **Approved Route** | Cedar Blvd → 3rd Ave → County Community ❌ Avoid Main St |
+| **Approved Route** | Cedar Blvd → 3rd Ave → County Community ❌ Avoid Main Street |
 | **Pre-Notification** | ✅ Issued — General medicine and observation bed preparation requested |
 
 ### 5.3 Special Casualty Routing Advisories
@@ -205,22 +205,22 @@ A total of **13 units** were dispatched across Fire, EMS, and Police. **24 units
 | Hazard | Source | Current Status |
 |---|---|---|
 | 🔥 Active 3-story structure fire | Initial incident report | 🔴 ACTIVE — Fire suppression in progress |
-| 😮‍💨 Smoke inhalation casualties | Initial incident report | 🔴 ACTIVE — EMS on scene |
-| 🚗 Heavy traffic gridlock — Main St | Traffic hazard assessment | 🟠 ONGOING — Traffic Units deployed; signal preemption active |
+| 😮‍💨 Smoke inhalation casualties | Initial incident report | 🔴 ACTIVE — Ambulance Service on scene |
+| 🚗 Heavy traffic gridlock — Main Street | Traffic hazard assessment | 🟠 ONGOING — Traffic patrols deployed; signal preemption active |
 | ⚡ Live electrical hazard | Precautionary — structure fire protocol | 🟡 PENDING — Electric utility crew en route |
 | 🔥 Gas line hazard | Precautionary — structure fire protocol | 🟡 PENDING — Gas utility crew en route |
-| 🧪 Chemical / structural hazard | Precautionary — Hazmat dispatched | 🟡 PENDING — Hazmat Truck assessment in progress |
+| 🧪 Chemical / structural hazard | Precautionary — hazardous materials dispatched | 🟡 PENDING — hazardous materials Truck assessment in progress |
 
 ### 6.2 Traffic Hazard Management
 
-Traffic assessment confirmed **high density on Main St** throughout the Downtown corridor. The following mitigation measures were immediately enacted:
+Traffic assessment confirmed **high density on Main Street** throughout the city centre corridor. The following mitigation measures were immediately enacted:
 
 | Measure | Details |
 |---|---|
-| Signal Preemption | Green wave activated on Oak Ave and Elm St → Cedar Blvd corridors |
-| Dynamic Message Signs | Electronic highway signs updated — civilian traffic diverted away from Pine St area |
-| Police Traffic Units | 2 Traffic Units deployed to Main St corridor for physical enforcement |
-| CAD Broadcast | All responding units directed to avoid Main St via Oak Ave or Elm St → Cedar Blvd |
+| Signal Preemption | Green wave activated on Oak Avenue and Elm St → Cedar Blvd corridors |
+| Dynamic Message Signs | Electronic highway signs updated — civilian traffic diverted away from Pine Street area |
+| Police Traffic patrols | 2 Traffic patrols deployed to Main Street corridor for physical enforcement |
+| CAD Broadcast | All responding units directed to avoid Main Street via Oak Avenue or Elm St → Cedar Blvd |
 | Civilian Alert | Public safety alert issued across WEA, EAS, social media, Reverse 911, and DMS systems |
 
 ### 6.3 Utility Hazard Management
@@ -228,14 +228,14 @@ Traffic assessment confirmed **high density on Main St** throughout the Downtown
 | Utility | Company | Action | Status |
 |---|---|---|---|
 | 🔥 Natural Gas | City Gas & Energy Co. | Emergency shutoff crew dispatched — main gas line shutoff at structure and street meter | 🟡 En Route |
-| ⚡ Electric | Downtown Electric Authority | Emergency shutoff crew dispatched — building power shutoff and transformer isolation | 🟡 En Route |
+| ⚡ Electric | city centre Electric Authority | Emergency shutoff crew dispatched — building power shutoff and transformer isolation | 🟡 En Route |
 
-> ⚠️ **Standing Order to All On-Scene Units:** Treat the structure at 45 Pine St (WC1A Bloomsbury, London) as having **live gas and electrical hazards** until utility crews confirm shutoff completion to the Incident Commander.
+> ⚠️ **Standing Order to All On-Scene Units:** Treat the structure at 45 Pine Street (WC1A Bloomsbury, London) as having **live gas and electrical hazards** until utility crews confirm shutoff completion to the Incident Commander.
 
 ### 6.4 Structural & Chemical Hazard Management
 
-- **1 Hazmat Truck** dispatched to conduct a full chemical and structural hazard assessment of the 3-story structure.
-- Rescue Squad has been briefed on **standard 3-story search protocol** pending receipt of building floor plans:
+- **1 hazardous materials Truck** dispatched to conduct a full chemical and structural hazard assessment of the 3-story structure.
+- Rescue Unit has been briefed on **standard 3-story search protocol** pending receipt of building floor plans:
 
 | Priority | Search Action |
 |---|---|
@@ -263,16 +263,16 @@ Building management, the Municipal Building & Planning Department, and the Fire 
 
 ### 7.1 Public Safety Alert
 
-A full-spectrum public safety alert was issued across all available broadcast channels advising civilians to avoid the Downtown area surrounding 45 Pine St (WC1A Bloomsbury, London)
+A full-spectrum public safety alert was issued across all available broadcast channels advising civilians to avoid the city centre area surrounding 45 Pine Street (WC1A Bloomsbury, London)
 
 | Channel | Method |
 |---|---|
-| 📱 Wireless Emergency Alert (WEA) | Cell broadcast to all mobile devices within Downtown geofence |
+| 📱 Wireless Emergency Alert (WEA) | Cell broadcast to all mobile devices within city centre geofence |
 | 📻 Emergency Alert System (EAS) | Broadcast over local AM/FM radio stations |
 | 📺 Local TV Emergency Crawl | Transmitted to local television stations |
 | 🌐 City Emergency Website & App | Posted to official city emergency management portal |
 | 🐦 Official Social Media | City, Police, and Fire Department accounts — X, Facebook, Nextdoor |
-| 🚔 Police PA Systems | Live broadcast by Cruisers and Traffic Units on scene |
+| 🚔 Police PA Systems | Live broadcast by patrol cars and Traffic patrols on scene |
 | 🚦 Dynamic Message Signs | Highway and arterial electronic signs updated |
 | 📞 Reverse 911 / CodeRED | Automated calls and texts to registered addresses in affected zip codes |
 
@@ -280,20 +280,20 @@ A full-spectrum public safety alert was issued across all available broadcast ch
 
 | Zone | Area | Instruction |
 |---|---|---|
-| 🔴 Exclusion Zone | 45 Pine St (WC1A Bloomsbury, London) + 1-block radius | No civilian access — active fire scene |
-| 🟠 Avoidance Zone | Main St — full Downtown corridor | Avoid — confirmed gridlock; emergency vehicle corridor |
-| 🟡 Caution Zone | 2-block radius around Pine St | Use alternate routes; expect delays and police direction |
-| 🟢 Recommended Detour | Oak Ave → Riverside Dr → 3rd Ave | Civilian detour route away from incident |
+| 🔴 Exclusion Zone | 45 Pine Street (WC1A Bloomsbury, London) + 1-block radius | No civilian access — active fire scene |
+| 🟠 Avoidance Zone | Main Street — full city centre corridor | Avoid — confirmed gridlock; emergency vehicle corridor |
+| 🟡 Caution Zone | 2-block radius around Pine Street | Use alternate routes; expect delays and police direction |
+| 🟢 Recommended Detour | Oak Avenue → Riverside Dr → 3rd Ave | Civilian detour route away from incident |
 
 ### 7.3 Communications Schedule
 
 | Interval | Action | Responsible Party |
 |---|---|---|
-| Every 10 minutes | SITREP from all Branch Directors to Incident Commander | Fire, EMS, Police Branch Directors |
+| Every 10 minutes | SITREP from all Branch Directors to Incident Commander | Fire, Ambulance Service, Police Branch Directors |
 | Every 10 minutes | IC relays consolidated SITREP to EOC Director | Battalion Chief |
 | Every 15 minutes | EOC issues updated CAD broadcast to all units | EOC Communications Officer |
-| Per patient transport | EMS unit confirms patient handoff; reports to EOC EMS Liaison | Ambulance and Fly-Car crews |
-| Per hazard update | Hazmat Truck reports assessment findings to IC and EOC | Hazmat Truck Commander |
+| Per patient transport | Ambulance Service unit confirms patient handoff; reports to EOC Ambulance Service Liaison | Ambulance and RRV crews |
+| Per hazard update | hazardous materials Truck reports assessment findings to IC and EOC | hazardous materials Truck Commander |
 | Per utility milestone | Gas and electric crews confirm shutoff progress to IC and EOC | Utility crew leads |
 | Every 30 minutes | PIO issues public update via social media, WEA, and media briefing | Public Information Officer |
 
@@ -305,13 +305,13 @@ The following conditions require **immediate radio notification** and escalation
 
 | Trigger | Immediate Action |
 |---|---|
-| 🔥 Structural collapse risk identified | IC broadcasts all-units evacuation warning; EOC requests additional Rescue Squads |
-| 💥 Gas or chemical hazard confirmed by Hazmat | IC orders hot zone evacuation; EOC activates full Hazmat response protocol |
+| 🔥 Structural collapse risk identified | IC broadcasts all-units evacuation warning; EOC requests additional Rescue Units |
+| 💥 Gas or chemical hazard confirmed by hazardous materials | IC orders hot zone evacuation; EOC activates full hazardous materials response protocol |
 | 🚑 Casualty count exceeds 10 | EOC activates regional MCI protocol; additional ambulances requested |
 | 🏥 St. Jude burn capacity exceeded | EOC Hospital Liaison activates regional burn center diversion |
-| 🚒 Fire spreads to adjacent structures | IC requests 2 additional Fire Engines from reserve; EOC notifies neighboring district stations |
+| 🚒 Fire spreads to adjacent structures | IC requests 2 additional Fire engines from reserve; EOC notifies neighboring district stations |
 | 🚔 Crowd control breakdown | Police Branch Director requests Tactical Van deployment from reserve |
-| ⚡ Firefighter injury or MAYDAY declared | IC broadcasts MAYDAY protocol; EOC dispatches reserve Rescue Squad and additional EMS |
+| ⚡ Firefighter injury or MAYDAY declared | IC broadcasts MAYDAY protocol; EOC dispatches reserve Rescue Unit and additional Ambulance Service |
 
 ---
 
@@ -319,14 +319,14 @@ The following conditions require **immediate radio notification** and escalation
 
 > ### 📡 STANDING ORDERS — ALL UNITS — INC-20250001
 >
-> 1. **Approach ONLY via Oak Ave or Elm St → Cedar Blvd corridor.** ❌ Main St is gridlocked and prohibited for all emergency vehicles.
-> 2. **Report to the Incident Commander (Battalion Chief) at the Unified Command Post — Oak Ave & Pine St, NW Corner — upon arrival.**
+> 1. **Approach ONLY via Oak Avenue or Elm St → Cedar Blvd corridor.** ❌ Main Street is gridlocked and prohibited for all emergency vehicles.
+> 2. **Report to the Incident Commander (Battalion Chief) at the Unified Command Post — Oak Avenue & Pine Street, NW Corner — upon arrival.**
 > 3. **Provide SITREP to Incident Commander every 10 minutes.** IC will relay consolidated reports to the EOC every 10 minutes.
-> 4. **Treat the structure at 45 Pine St (WC1A Bloomsbury, London) as having active gas and electrical hazards** until utility crews confirm shutoff completion to the IC.
+> 4. **Treat the structure at 45 Pine Street (WC1A Bloomsbury, London) as having active gas and electrical hazards** until utility crews confirm shutoff completion to the IC.
 > 5. **All media inquiries are to be directed to the Public Information Officer at the Command Post.** No unit personnel are authorized to speak to media independently.
 > 6. **All requests for additional resources must be routed through the Incident Commander to the EOC Director.** Do not self-deploy reserve units without IC authorization.
-> 7. **Casualty transport routing is active.** Confirm patient category with the Paramedic Fly-Car before departure. Report patient handoff status to the EOC EMS Liaison after each delivery.
-> 8. **Hazmat assessment is ongoing.** All units must maintain awareness of potential chemical and structural hazards until Hazmat Truck Commander issues an all-clear to the IC.
+> 7. **Casualty transport routing is active.** Confirm patient category with the Rapid Response Vehicle (RRV) before departure. Report patient handoff status to the EOC Ambulance Service Liaison after each delivery.
+> 8. **hazardous materials assessment is ongoing.** All units must maintain awareness of potential chemical and structural hazards until hazardous materials Truck Commander issues an all-clear to the IC.
 
 ---
 
@@ -337,7 +337,7 @@ The following conditions require **immediate radio notification** and escalation
 | # | Observation |
 |---|---|
 | 1 | Rapid multi-agency resource availability checks enabled fully informed dispatch decisions before any unit was committed |
-| 2 | Traffic hazard identification directly informed all subsequent routing decisions — Main St avoidance was consistently applied across all 13 dispatched units |
+| 2 | Traffic hazard identification directly informed all subsequent routing decisions — Main Street avoidance was consistently applied across all 13 dispatched units |
 | 3 | Tiered hospital routing optimized patient outcomes by precisely matching casualty type to hospital capability and bed availability |
 | 4 | Unified Command structure and EOC Level 1 activation ensured coordinated, non-duplicative multi-agency management |
 | 5 | Public safety alert issued across all available channels simultaneously — maximized civilian awareness and area clearance |
@@ -348,7 +348,7 @@ The following conditions require **immediate radio notification** and escalation
 
 | # | Observation | Recommended Action |
 |---|---|---|
-| 1 | No dedicated aerial/ladder truck category exists in the dispatch system | Evaluate whether Rescue Squad adequately covers upper-floor access; consider adding Aerial Truck as a dispatchable vehicle category |
+| 1 | No dedicated aerial/aerial appliance category exists in the dispatch system | Evaluate whether Rescue Unit adequately covers upper-floor access; consider adding Aerial Truck as a dispatchable vehicle category |
 | 2 | St. Jude Medical burn capacity is critically limited at 4 beds | Establish pre-incident regional burn center diversion agreements for MCI scenarios |
 | 3 | Floor plan retrieval was reactive — initiated after dispatch rather than automatically | Integrate pre-incident planning database with CAD for automatic floor plan retrieval on all structure fire calls |
 | 4 | Battalion Chief dispatch had no corresponding dispatch tool — command unit not in system | Evaluate adding Command Unit and Battalion Chief as dispatchable resource categories in CAD |
@@ -363,7 +363,7 @@ The following conditions require **immediate radio notification** and escalation
 | Incident Commander — Battalion Chief | On-scene command reference and post-incident debrief |
 | EOC Director | Executive oversight and escalation decision support |
 | Fire Department Administration | Operational review and training |
-| EMS / Medical Services | Patient care quality review |
+| Ambulance Service / Medical Services | Patient care quality review |
 | Police Department Administration | Traffic management and crowd control review |
 | City Emergency Management | Official municipal incident archive |
 | Legal / Risk Management | Liability documentation and compliance |
@@ -372,8 +372,9 @@ The following conditions require **immediate radio notification** and escalation
 ---
 
 *Report compiled by: Chief Emergency Coordinator — Dispatch Operations*
-*Incident: INC-20250001 | Location: 45 Pine St (WC1A Bloomsbury, London) | Status: 🔴 ACTIVE*
+*Incident: INC-20250001 | Location: 45 Pine Street (WC1A Bloomsbury, London) | Status: 🔴 ACTIVE*
 *All data current as of time of compilation. Documentation will be updated continuously until incident closeout.*
 
 ---
 *🔴 INC-20250001 REMAINS ACTIVE — ALL UNITS CONTINUE OPERATIONS UNDER UNIFIED COMMAND*
+

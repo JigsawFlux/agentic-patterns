@@ -1,7 +1,7 @@
 # 🚨 MASTER EMERGENCY DISPATCH SUMMARY
 **Document Type:** Official Incident Command Report
 **Incident:** Structure Fire & Mass Casualty Event
-**Address:** 45 Pine St (WC1A Bloomsbury, London) District
+**Address:** 45 Pine Street (WC1A Bloomsbury, London) District
 **Prepared By:** Chief Coordinator
 **Classification:** 🔴 CRITICAL — Active Incident
 
@@ -9,7 +9,7 @@
 
 > ## ⚠️ EXECUTIVE OVERVIEW
 >
-> A 3-story structure fire is actively burning at **45 Pine St (WC1A Bloomsbury, London)**. Multiple casualties reporting smoke inhalation have been confirmed, with exact count pending field verification. Heavy traffic gridlock in the Downtown corridor presents a secondary but serious threat to emergency vehicle access. A full multi-agency response has been authorized and is currently in motion. All units are operating under unified Incident Command with dynamic reallocation authority active.
+> A 3-story structure fire is actively burning at **45 Pine Street (WC1A Bloomsbury, London)**. Multiple casualties reporting smoke inhalation have been confirmed, with exact count pending field verification. Heavy traffic gridlock in the city centre corridor presents a secondary but serious threat to emergency vehicle access. A full multi-agency response has been authorized and is currently in motion. All units are operating under unified Incident Command with dynamic reallocation authority active.
 
 ---
 
@@ -38,8 +38,8 @@
 
 ### 1.3 Location & Structural Profile
 
-- **Address:** 45 Pine St (WC1A Bloomsbury, London)
-- **District:** Downtown Area
+- **Address:** 45 Pine Street (WC1A Bloomsbury, London)
+- **District:** city centre Area
 - **Structure Type:** 3-Story Commercial / Residential Building
 - **Access Concern:** ⚠️ Heavy traffic gridlock on Main Street corridor — confirmed threat to response vehicle ingress
 
@@ -59,8 +59,8 @@
 
 ### 1.5 Immediate Action Flags
 
-- [x] Dispatch Fire Suppression Units to 45 Pine St (WC1A Bloomsbury, London)
-- [x] Deploy EMS for smoke inhalation treatment
+- [x] Dispatch Fire Suppression Units to 45 Pine Street (WC1A Bloomsbury, London)
+- [x] Deploy Ambulance Service for smoke inhalation treatment
 - [x] Coordinate Traffic Control to clear access routes
 - [x] Initiate building evacuation protocol
 - [ ] **Confirm casualty count on arrival** ← *Pending field report*
@@ -75,13 +75,13 @@
 
 | Unit Type | Dispatched | Available Before | Remaining After |
 |-----------|-----------|-----------------|-----------------|
-| 🚒 Fire Engine | **3** | 5 of 8 | 2 of 8 |
-| 🧰 Rescue Squad | **2** | 3 of 4 | 1 of 4 |
+| 🚒 Fire engine | **3** | 5 of 8 | 2 of 8 |
+| 🧰 Rescue Unit | **2** | 3 of 4 | 1 of 4 |
 
 **Dispatch Rationale:**
-- Three Fire Engines provide sufficient suppression capacity and interior attack capability for a 3-story active structure fire.
-- Two Rescue Squads are assigned to building search, occupant evacuation, and potential victim extraction from upper floors.
-- **Hazmat Unit:** Held in reserve — no confirmed chemical or toxic smoke composition at this time. Deploy immediately upon field flag.
+- Three Fire engines provide sufficient suppression capacity and interior attack capability for a 3-story active structure fire.
+- Two Rescue Units are assigned to building search, occupant evacuation, and potential victim extraction from upper floors.
+- **hazardous materials Unit:** Held in reserve — no confirmed chemical or toxic smoke composition at this time. Deploy immediately upon field flag.
 
 ---
 
@@ -90,11 +90,11 @@
 | Unit Type | Dispatched | Available Before | Remaining After |
 |-----------|-----------|-----------------|-----------------|
 | 🚑 Ambulance | **4** | 6 of 12 | 2 of 12 |
-| 👨‍⚕️ Paramedic Fly-Car | **2** | 4 of 5 | 2 of 5 |
+| 👨‍⚕️ Rapid Response Vehicle (RRV) | **2** | 4 of 5 | 2 of 5 |
 
 **Dispatch Rationale:**
 - Four Ambulances provide multi-patient transport capacity appropriate for an unknown but implied mass casualty count.
-- Two Paramedic Fly-Cars are deployed for rapid Advanced Life Support (ALS) on-scene intervention. Smoke inhalation casualties can deteriorate rapidly — early ALS contact is critical.
+- Two Rapid Response Vehicles (RRVs) are deployed for rapid Advanced Life Support (ALS) on-scene intervention. Smoke inhalation casualties can deteriorate rapidly — early ALS contact is critical.
 - **Additional Ambulances:** 2 units remain on standby and will be activated immediately upon field confirmation of casualty count exceeding current transport capacity.
 
 ---
@@ -119,12 +119,12 @@
 
 | Category | Units Dispatched | Primary Purpose |
 |----------|-----------------|-----------------|
-| 🚒 Fire Engines | 3 | Active fire suppression and interior attack |
-| 🧰 Rescue Squads | 2 | Search, rescue, and building evacuation |
+| 🚒 Fire engines | 3 | Active fire suppression and interior attack |
+| 🧰 Rescue Units | 2 | Search, rescue, and building evacuation |
 | 🚑 Ambulances | 4 | Multi-patient casualty transport |
-| 👨‍⚕️ Paramedic Fly-Cars | 2 | On-scene ALS intervention |
-| 🚦 Traffic Units | 3 | Access corridor clearance and gridlock diversion |
-| 🚔 Police Cruisers | 2 | Scene security and evacuation enforcement |
+| 👨‍⚕️ Rapid Response Vehicles (RRVs) | 2 | On-scene ALS intervention |
+| 🚦 Traffic patrols | 3 | Access corridor clearance and gridlock diversion |
+| 🚔 Police patrol cars | 2 | Scene security and evacuation enforcement |
 | **Total Units Dispatched** | **16** | |
 
 ---
@@ -134,7 +134,7 @@
 | Flag | Status | Detail |
 |------|--------|--------|
 | 🔁 Casualty Count Confirmation | ⏳ Pending | Additional ambulances on standby for immediate activation |
-| 🔥 Hazmat Deployment | ⚠️ On Alert | Deploy immediately if chemical hazard or toxic smoke is flagged |
+| 🔥 hazardous materials Deployment | ⚠️ On Alert | Deploy immediately if chemical hazard or toxic smoke is flagged |
 | 🏥 Mercy General Pre-Notification | ✅ Complete | Primary receiving facility standing by |
 | 🏥 St. Jude Medical Pre-Notification | ✅ Complete | Burn and overflow facility standing by |
 | 📡 Radio Coordination | ✅ Active | All units on shared Incident Command channel |
@@ -149,10 +149,10 @@
 
 | Factor | Finding | Threat Level |
 |--------|---------|-------------|
-| **Traffic Conditions** | High density — Main St. Downtown corridor | 🔴 HIGH |
+| **Traffic Conditions** | High density — Main Street. city centre corridor | 🔴 HIGH |
 | **Weather Conditions** | No adverse weather flagged | 🟢 LOW |
 
-> **Primary Concern:** Unmanaged gridlock on Main Street represents a direct and immediate threat to emergency vehicle access. Delay in fire suppression or EMS arrival caused by traffic obstruction will directly increase risk to life and structural loss.
+> **Primary Concern:** Unmanaged gridlock on Main Street represents a direct and immediate threat to emergency vehicle access. Delay in fire suppression or Ambulance Service arrival caused by traffic obstruction will directly increase risk to life and structural loss.
 
 ---
 
@@ -160,32 +160,32 @@
 
 | Unit Type | Available | Total Fleet | Status |
 |-----------|-----------|-------------|--------|
-| 🚦 Traffic Unit | 5 of 6 | 6 | ✅ Ready |
-| 🚔 Police Cruiser | 10 of 15 | 15 | ✅ Ready |
+| 🚦 Traffic patrol | 5 of 6 | 6 | ✅ Ready |
+| 🚔 Police patrol car | 10 of 15 | 15 | ✅ Ready |
 | 🚐 Tactical Van | 2 of 3 | 3 | ✅ On Standby |
 
 ---
 
-### 3.3 Traffic Unit Deployments
+### 3.3 Traffic patrol Deployments
 
 | Unit | Assignment | Location & Task |
 |------|-----------|-----------------|
-| **TC-1** | Traffic Unit | Main St. & Pine St. intersection — Primary emergency access corridor clearance |
-| **TC-2** | Traffic Unit | Main St. upstream — Civilian traffic diversion point; redirect flow away from Downtown core |
-| **TC-3** | Traffic Unit | Pine St. perimeter — Dedicated emergency vehicle lane; hold civilian traffic clear of 45 Pine St (WC1A Bloomsbury, London) |
+| **TC-1** | Traffic patrol | Main Street. & Pine Street. intersection — Primary emergency access corridor clearance |
+| **TC-2** | Traffic patrol | Main Street. upstream — Civilian traffic diversion point; redirect flow away from city centre core |
+| **TC-3** | Traffic patrol | Pine Street. perimeter — Dedicated emergency vehicle lane; hold civilian traffic clear of 45 Pine Street (WC1A Bloomsbury, London) |
 
-> **Remaining Traffic Units:** 2 of 6 held in reserve for dynamic redeployment if scene expands or secondary gridlock points emerge.
+> **Remaining Traffic patrols:** 2 of 6 held in reserve for dynamic redeployment if scene expands or secondary gridlock points emerge.
 
 ---
 
-### 3.4 Police Cruiser Deployments
+### 3.4 Police patrol car Deployments
 
 | Unit | Assignment | Location & Task |
 |------|-----------|-----------------|
-| **CR-1** | Police Cruiser | North perimeter — Hard roadblock; no civilian vehicle entry |
-| **CR-2** | Police Cruiser | South perimeter — Evacuation route enforcement and crowd control buffer |
+| **CR-1** | Police patrol car | North perimeter — Hard roadblock; no civilian vehicle entry |
+| **CR-2** | Police patrol car | South perimeter — Evacuation route enforcement and crowd control buffer |
 
-> **Remaining Cruisers:** 8 of 15 available for scene security escalation, additional perimeter control, or redeployment per Incident Command.
+> **Remaining patrol cars:** 8 of 15 available for scene security escalation, additional perimeter control, or redeployment per Incident Command.
 
 ---
 
@@ -194,13 +194,13 @@
 ```
         ┌─────────────────────────────────────┐
         │         [DIVERSION POINT]           │
-        │     TC-2 — Main St. Upstream        │
+        │     TC-2 — Main Street. Upstream        │
         │   ← Civilian Traffic Redirected     │
         └──────────────┬──────────────────────┘
                        ↓
         ┌──────────────────────────────────────┐
         │        [CORRIDOR OPEN]               │
-        │    TC-1 — Main St. & Pine St.        │
+        │    TC-1 — Main Street. & Pine Street.        │
         │   🚒🚑 Emergency Lane Established   │
         └──────────────┬───────────────────────┘
                        ↓
@@ -218,12 +218,12 @@
 
 | Action | Status |
 |--------|--------|
-| ✅ Emergency access corridor established — Main St. → Pine St. | **Confirmed** |
-| ✅ Hard roadblocks set — North and South perimeters of 45 Pine St (WC1A Bloomsbury, London) | **Confirmed** |
-| ✅ Civilian traffic diverted upstream on Main St. | **Confirmed** |
+| ✅ Emergency access corridor established — Main Street. → Pine Street. | **Confirmed** |
+| ✅ Hard roadblocks set — North and South perimeters of 45 Pine Street (WC1A Bloomsbury, London) | **Confirmed** |
+| ✅ Civilian traffic diverted upstream on Main Street. | **Confirmed** |
 | ✅ Evacuation egress route held clear on south perimeter | **Confirmed** |
 | ✅ All traffic units on shared radio channel with Incident Command | **Confirmed** |
-| 🔁 2 Traffic Units & 8 Cruisers on standby for redeployment | **Active** |
+| 🔁 2 Traffic patrols & 8 patrol cars on standby for redeployment | **Active** |
 | ⚠️ Tactical Vans (2 available) — NOT dispatched; held in reserve | **Standby** |
 
 ---
@@ -245,11 +245,11 @@
 
 | # | Action Item | Priority | Owner |
 |---|-------------|----------|-------|
-| 1 | Confirm exact casualty count on arrival | 🔴 Critical | First EMS unit on scene |
-| 2 | Confirm structural integrity and fire spread to adjacent buildings | 🔴 Critical | Fire Engine Company Lead |
-| 3 | Assess smoke composition — flag Hazmat if chemical hazard detected | 🔴 Critical | Rescue Squad Lead |
+| 1 | Confirm exact casualty count on arrival | 🔴 Critical | First Ambulance Service unit on scene |
+| 2 | Confirm structural integrity and fire spread to adjacent buildings | 🔴 Critical | Fire engine Company Lead |
+| 3 | Assess smoke composition — flag hazardous materials if chemical hazard detected | 🔴 Critical | Rescue Unit Lead |
 | 4 | Report Mercy General capacity status upon first patient delivery | 🟠 High | Ambulance Unit Lead |
-| 5 | Confirm evacuation of all building occupants | 🟠 High | Rescue Squad Lead |
+| 5 | Confirm evacuation of all building occupants | 🟠 High | Rescue Unit Lead |
 | 6 | Report any secondary gridlock points not covered by current traffic plan | 🟡 Moderate | TC-2 / Traffic Coordinator |
 
 ---
@@ -259,11 +259,11 @@
 | Trigger Condition | Automatic Response |
 |------------------|--------------------|
 | Casualty count exceeds 6 | Activate standby ambulances immediately |
-| Chemical / toxic smoke confirmed | Deploy Hazmat Unit from reserve |
-| Fire spreads to adjacent structure | Dispatch additional Fire Engine from reserve |
+| Chemical / toxic smoke confirmed | Deploy hazardous materials Unit from reserve |
+| Fire spreads to adjacent structure | Dispatch additional Fire engine from reserve |
 | Mercy General reaches capacity | Route all new casualties to St. Jude Medical |
 | Crowd control escalates beyond current perimeter | Deploy Tactical Vans from reserve |
-| Secondary gridlock point identified | Redeploy reserve Traffic Units |
+| Secondary gridlock point identified | Redeploy reserve Traffic patrols |
 
 ---
 
@@ -280,3 +280,4 @@
 *Document Status: 🔴 ACTIVE — Pending Field Confirmation Updates*
 
 ---
+
