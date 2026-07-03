@@ -202,6 +202,33 @@ The compiled Markdown reports for each pattern are saved in the [outputs/](outpu
 
 ---
 
+## 🤝 Get Involved
+
+This project is self-funded and open source. Phase 1 — the eight patterns, UK/NHS domain alignment, LLM factory, per-run telemetry, and human-in-the-loop gate — is complete and on `main`. Phase 2 (sovereign deployment on local models, Care Act 2014 domain, persistent audit trail) needs people who care about responsible AI in public services. If that is you, there is real work to pick up.
+
+### Who we are looking for
+
+**NHS and emergency services practitioners.** The 999 simulation is deliberately fictional — but the protocols it references (METHANE, OPEL levels, NEWS2 scoring, NFCC minimum appliance counts, JESIP command structure) are real, and the Reflexion pattern already catches one genuine protocol violation per run. If you work in blue-light services, ambulance operations, or NHS command and control, your domain corrections are worth more than any pull request. Open an issue and tell us where we got it wrong — that is the most valuable contribution this project can receive.
+
+**Engineers who care about portability.** The LLM factory (`shared/llm.py`) means you can run every pattern without an Anthropic API key — set `LLM_PROVIDER=ollama` in `.env` and point it at a local model. That is where the most interesting open work is: documenting which patterns survive tool-calling degradation on smaller open-weight models and which need structured output guards to function reliably. You do not need a GPU server — a MacBook M-series or an Intel NUC will run the lightweight Ollama models for most patterns.
+
+**AI architects and researchers.** The eight patterns here are a controlled experiment: same environment, same tools, same incident, eight different reasoning architectures. The Reflexion–ReWOO comparison alone (728s with iterative safety checks vs. 65s with a static plan) is a data point worth reproducing on a different model, a different domain, or a different incident class. Run the comparison, document what changes, and open an issue with the findings.
+
+### Specific asks (mapped to Phase 2)
+
+- **Test any pattern on a local Ollama model** and open an issue documenting where it succeeds and where tool-calling breaks — this is the highest-value contribution for Phase 2 work
+- **Validate the operational scenario** against real blue-light or NHS knowledge — file corrections as GitHub Issues; domain accuracy matters more than code cleanliness here
+- **Implement `shared/audit.py`** — a SQLite-backed audit logger for `dispatch_resource` and `request_human_approval` calls with timestamp and approval status (Phase 2, Section 5)
+- **Add a Care Act 2014 domain scenario** alongside the 999 fire scenario — safeguarding referral, mental health crisis, CRHT team dispatch (Phase 2, Section 4)
+- **Write `docs/sovereign_setup.md`** — a reproducible Ollama deployment recipe for air-gapped or resource-constrained environments (Phase 2, Section 3)
+- **Translate the scenario to another jurisdiction** (AUS Triple Zero, EU 112, US 911) and open a PR — the shared environment model is jurisdiction-agnostic by design
+
+### How to engage
+
+Everything goes through **[GitHub Issues](https://github.com/JigsawFlux/agentic-patterns/issues)** — for bugs, domain feedback, feature proposals, and collaboration. There is no Slack, no Discord, no mailing list. Open an issue and we will go from there.
+
+---
+
 ## ⚠️ Ethics, Safety & Limitations
 
 > **This is a research simulator. It must never be used in or connected to a live production dispatch, NHS operational system, or any clinical decision interface.**
