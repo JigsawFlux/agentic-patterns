@@ -1,16 +1,17 @@
 # patterns/react.py
-import os
 from typing import TypedDict, Annotated, Sequence
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
     query_hospital_status,
     check_weather_and_traffic_hazards,
+    check_opel_level,
+    assess_news2_score,
     dispatch_resource
 )
 
@@ -24,6 +25,8 @@ tools = [
     check_responder_availability,
     query_hospital_status,
     check_weather_and_traffic_hazards,
+    check_opel_level,
+    assess_news2_score,
     dispatch_resource
 ]
 tool_node = ToolNode(tools)
@@ -33,12 +36,7 @@ def call_model(state: ReActState):
     print("\n[ReAct Agent] 🤔 Reasoning & Deciding Next Action...")
     messages = state["messages"]
     
-    # Initialize the Anthropic Chat Model
-    model = ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=0.1
-    )
+    model = get_llm(temperature=0.1)
     
     # Bind the tools
     model_with_tools = model.bind_tools(tools)
@@ -84,15 +82,20 @@ def run_pattern(incident: str) -> dict:
     app = build_react_graph()
     
     system_prompt = (
-        "You are an Emergency Dispatch Officer. Your goal is to coordinate a response to the emergency incident.\n"
+        "You are a 999 Emergency Dispatch Officer coordinating a multi-agency response in London.\n"
         "Follow this procedure:\n"
-        "1. Check the availability of necessary responders (Fire, Medical, Police).\n"
-        "2. Check for nearby hazards or traffic delays that might impact response times.\n"
-        "3. Select and query the status of the closest hospital if injuries are reported.\n"
-        "4. Dispatch the appropriate units (vehicle types and counts) based on resources and hazards.\n"
-        "5. Conclude with a final, structured summary detailing which resources were dispatched to where, "
-        "and any instructions for the field units.\n\n"
-        "Do not stop until all necessary resource dispatching and coordination has been executed."
+        "1. Check the availability of Fire, Medical, and Police responders.\n"
+        "2. Check for road hazards or traffic delays affecting response routes.\n"
+        "3. If casualties are reported, use assess_news2_score to determine clinical urgency, "
+        "then query hospital status and check OPEL levels to select the appropriate receiving hospital.\n"
+        "   - Burns casualties must go to Northgate University Hospital NHS Foundation Trust (only Burns Unit in network).\n"
+        "   - Severe trauma: Northgate (Major Trauma Centre) or St. Aldric's (Trauma Unit) depending on OPEL level.\n"
+        "   - Minor injuries: Holborn Community Health Centre.\n"
+        "4. Dispatch appropriate units using exact UK vehicle type names "
+        "(e.g. 'Pumping Appliance', 'Double-Crewed Ambulance', 'Response Car').\n"
+        "5. Conclude with a structured summary: resources dispatched, hospital routing, hazard alerts, "
+        "and field instructions.\n\n"
+        "Do not stop until all dispatching and coordination is complete."
     )
     
     initial_state = {
@@ -104,9 +107,14 @@ def run_pattern(incident: str) -> dict:
     }
     
     result = app.invoke(initial_state)
-    
-    # Extract final response from the agent
-    final_message = result["messages"][-1].content
+
+    # Walk back to find the last AIMessage with content (avoids returning raw ToolMessage JSON)
+    from langchain_core.messages import AIMessage
+    final_message = ""
+    for msg in reversed(result["messages"]):
+        if isinstance(msg, AIMessage) and msg.content and not msg.tool_calls:
+            final_message = msg.content
+            break
     
     history = []
     for msg in result["messages"]:

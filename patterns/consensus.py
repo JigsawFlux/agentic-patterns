@@ -1,18 +1,11 @@
 # patterns/consensus.py
-import os
 import json
 import re
 from typing import TypedDict, List, Dict
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
-from shared.tools import (
-    check_responder_availability,
-    query_hospital_status,
-    check_weather_and_traffic_hazards,
-    dispatch_resource
-)
 
 # Define State Schema
 class ConsensusState(TypedDict):
@@ -22,12 +15,6 @@ class ConsensusState(TypedDict):
     round: int
     final_report: str
 
-def get_model(temperature=0.4):
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=temperature
-    )
 
 def parse_score_and_rationale(text: str) -> dict:
     # Heuristic parsing to find score: [1-5]
@@ -38,7 +25,7 @@ def parse_score_and_rationale(text: str) -> dict:
 # 1. Expert Node: Threat Analyst
 def threat_analyst_node(state: ConsensusState):
     print("\n[Consensus Agent] 📊 Threat Analyst: Assessing hazard and risk levels...")
-    model = get_model()
+    model = get_llm(temperature=0.4)
     
     debate_str = "\n\n".join(state.get("debate_history", []))
     
@@ -70,8 +57,8 @@ def threat_analyst_node(state: ConsensusState):
 
 # 2. Expert Node: Resource Chief
 def resource_chief_node(state: ConsensusState):
-    print("\n[Consensus Agent] 🚜 Resource Chief: Assessing responder availability and logisitics...")
-    model = get_model()
+    print("\n[Consensus Agent] 🚜 Resource Chief: Assessing responder availability and logistics...")
+    model = get_llm(temperature=0.4)
     
     debate_str = "\n\n".join(state.get("debate_history", []))
     
@@ -105,7 +92,7 @@ def resource_chief_node(state: ConsensusState):
 # 3. Expert Node: Public Safety Liaison
 def public_safety_liaison_node(state: ConsensusState):
     print("\n[Consensus Agent] 📢 Public Safety Liaison: Assessing public panic & evacuations...")
-    model = get_model()
+    model = get_llm(temperature=0.4)
     
     debate_str = "\n\n".join(state.get("debate_history", []))
     
@@ -127,12 +114,13 @@ def public_safety_liaison_node(state: ConsensusState):
     parsed = parse_score_and_rationale(response.content.strip())
     reviews = state.get("expert_reviews", {})
     reviews["PublicSafetyLiaison"] = parsed
-    
+
     statement = f"Public Safety Liaison voted SCORE: {parsed['score']}. Rationale: {parsed['rationale'][:150]}..."
-    
+
     return {
         "expert_reviews": reviews,
-        "debate_history": state.get("debate_history", []) + [statement]
+        "debate_history": state.get("debate_history", []) + [statement],
+        "round": state.get("round", 0) + 1
     }
 
 # Router: Checks if vote scores match or round limit is reached
@@ -152,14 +140,12 @@ def route_consensus(state: ConsensusState):
         return "compiler"
     else:
         print(f"[Consensus Agent] 🔀 Decision: Dissension detected {scores}. Loop back for debate round {round_count + 1}.")
-        # Increment round counter state
-        state["round"] = round_count + 1
         return "threat_analyst"
 
 # 4. Compiler Node: Drafts final consensus report
 def compiler_node(state: ConsensusState):
     print("\n[Consensus Agent] ✍️ Compiler Node: Writing final consensus summary...")
-    model = get_model(temperature=0.2)
+    model = get_llm(temperature=0.2)
     
     debate_str = "\n\n".join(state["debate_history"])
     reviews = state["expert_reviews"]

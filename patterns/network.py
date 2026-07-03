@@ -1,9 +1,8 @@
 # patterns/network.py
-import os
 from typing import TypedDict, List
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
@@ -19,17 +18,11 @@ class NetworkState(TypedDict):
     round: int
     final_report: str
 
-def get_model(temperature=0.3):
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=temperature
-    )
 
 # 1. Fire Chief Agent Node
 def fire_chief_node(state: NetworkState):
     print("\n[Network P2P] 🔥 Fire Chief: Proposing fire containment plan...")
-    model = get_model()
+    model = get_llm(temperature=0.3)
     tools = [check_responder_availability, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -39,7 +32,7 @@ def fire_chief_node(state: NetworkState):
         f"Incident: {state['incident']}\n\n"
         f"Prior Peer Discussion:\n{discussion_str if discussion_str else 'None'}\n\n"
         "You are the Fire Chief. Review the incident and the discussion. "
-        "Check availability and dispatch Fire Engines or Hazmat Trucks. "
+        "Check availability and dispatch Pumping Appliances, Aerial Ladder Platforms, or Incident Response Units. "
         "Write your assessment and actions directly to your peers (Police Chief, Medical Chief)."
     )
     
@@ -83,7 +76,7 @@ def fire_chief_node(state: NetworkState):
 # 2. Police Chief Agent Node
 def police_chief_node(state: NetworkState):
     print("\n[Network P2P] 👮 Police Chief: Proposing traffic coordination plan...")
-    model = get_model()
+    model = get_llm(temperature=0.3)
     tools = [check_responder_availability, check_weather_and_traffic_hazards, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -93,7 +86,7 @@ def police_chief_node(state: NetworkState):
         f"Incident: {state['incident']}\n\n"
         f"Prior Peer Discussion:\n{discussion_str}\n\n"
         "You are the Police Chief. Review the Fire Chief's plan and the incident. "
-        "Check weather and traffic hazards at the site. Dispatch police cruisers for road blockages and route safety. "
+        "Check weather and traffic hazards at the site. Dispatch Roads Policing Units or Response Cars for road closures and route safety. "
         "Provide your inputs directly to the Fire and Medical Chiefs."
     )
     
@@ -135,7 +128,7 @@ def police_chief_node(state: NetworkState):
 # 3. Medical Chief Agent Node
 def medical_chief_node(state: NetworkState):
     print("\n[Network P2P] 🚑 Medical Chief: Proposing hospital routing plan...")
-    model = get_model()
+    model = get_llm(temperature=0.3)
     tools = [check_responder_availability, query_hospital_status, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -199,7 +192,7 @@ def route_network(state: NetworkState):
 # 4. Compiler Node: Summarizes agreed multi-agent plan
 def compiler_node(state: NetworkState):
     print("\n[Network P2P] ✍️ Compiler Node: Summarizing final negotiated plan...")
-    model = get_model(temperature=0.2)
+    model = get_llm(temperature=0.2)
     
     discussion_str = "\n\n".join(state["discussion"])
     

@@ -1,364 +1,426 @@
-# Joint Liaison Officer — Unified Emergency Response Directive
-## Incident: Structure Fire — 45 Pine Street (WC1A Bloomsbury, London)
-### Classification: Active Multi-Agency Response | Mass Casualty Risk | Potential hazardous materials Event
+# JOINT LIAISON OFFICER — UNIFIED EMERGENCY RESPONSE DIRECTIVE
+**Incident: Structure Fire — 14 Kingsbourne Terrace, WC1B 9ZZ (London, WC1B)**
+**Classification: Working Structure Fire — Multi-Casualty, Multi-Agency Response**
+**Compiled By: Joint Liaison Officer**
+**Authority: Fire Chief | Police Chief | Medical Chief**
+**Joint Communications Net: MetFire Interop Channel 4 — ALL UNITS, ALL SERVICES**
 
 ---
 
-> **Issued By:** Joint Liaison Officer
-> **Authority:** Unified Command — Fire, Police, Medical
-> **Status:** ACTIVE — All Agencies Committed
-> **Critical Decision Gate:** hazardous materials Smoke Composition Assessment — ETA 10–15 Minutes
+## SECTION 1 — INCIDENT OVERVIEW
+
+A working three-story building fire has been confirmed at **14 Kingsbourne Terrace, WC1B 9ZZ**. Reports indicate visible smoke across multiple floors, confirmed casualties with smoke inhalation presentations, possible burns casualties on upper floors, and severe traffic gridlock on High Holborn caused by road works near Holborn Circus.
+
+All three services — London Fire Brigade, Metropolitan Police Service, and London Ambulance Service — have completed their individual dispatch briefings and reached full inter-agency alignment. This directive consolidates all agreed positions, confirmed assets, confirmed routes, confirmed coordination protocols, and outstanding escalation triggers into a single authoritative operational document.
+
+**No conflicts exist between the three service plans.** All confirmation requests have been answered. All assets are moving or staged. This directive is the single source of truth for this incident from this moment forward.
 
 ---
 
-## 1. Incident Overview
+## SECTION 2 — JOINT COMMAND STRUCTURE
 
-A confirmed working structure fire is active at **45 Pine Street (WC1A Bloomsbury, London)** — a 3-story commercial/residential building. Fire is tracking upward through the stairwell with upper floor extension confirmed as a live risk. Multiple smoke inhalation casualties are being actively extracted. Smoke composition remains **unconfirmed pending hazardous materials assessment** — all agencies are operating under **chemical exposure protocol until cleared**.
+### 2.1 Forward Command Post
 
-city centre midday conditions have produced peak foot and vehicle traffic gridlock. Wind is drifting **eastward toward Main Street**, elevating passive civilian inhalation risk beyond the immediate structure perimeter.
-
----
-
-## 2. Unified Command Structure
-
-| Role | Officer | Command Position |
-|---|---|---|
-| **Fire Command** | Fire Chief | On-scene — Unified Command Post |
-| **Police Command** | Police Chief | On-scene — Unified Command Post |
-| **Medical Command** | Medical Chief | On-scene — Unified Command Post |
-| **Joint Liaison** | Joint Liaison Officer | Unified Command Post — Cross-agency coordination |
-
-**All escalation decisions, hazardous materials confirmation calls, evacuation orders, and mutual aid requests are routed through Unified Command. No agency acts unilaterally on a cross-agency trigger.**
-
----
-
-## 3. Environmental & Site Conditions
-
-| Factor | Status | Operational Impact |
-|---|---|---|
-| **Wind Direction** | Eastward drift — confirmed and sustained | Smoke plume pushing toward Main Street — civilian exposure risk elevated east of structure |
-| **Wind Speed** | Moderate — plume sustained, not dispersing | East perimeter exposure risk is ongoing, not diminishing |
-| **Visibility** | Reduced within half-block of structure — worsening near upper floors | Officer and personnel safety advisory in effect — respiratory protection mandatory east of structure |
-| **Road Surface** | Dry — no precipitation | Vehicle movement favorable on cleared lanes |
-| **city centre Traffic** | Peak midday — HIGH congestion | Gridlock actively compounding emergency access — rerouting in effect |
-| **Secondary Route Status** | Oak Avenue absorbing rerouted volume — congestion developing at Oak Avenue / 3rd Street node | patrol car C deployed to manage; 3rd Street bypass remains clear |
-
----
-
-## 4. Fire Department — Deployed Resources
-
-### 4.1 Current Dispatch
-
-| Unit | Total On Scene | Assignment |
-|---|---|---|
-| **Fire engines** | **5 of 8** | Engines 1–3: Active suppression & ground floor S&R. Engine 4: Upper floor suppression (floors 2–3). Engine 5: Adjacent structure exposure protection — north staging. |
-| **hazardous materials Trucks** | **2 of 3** | hazardous materials 1: On-scene chemical assessment. hazardous materials 2: Downwind air sampling — eastern corridor toward Main Street (escorted by Police patrol car B). |
-| **Rescue Units** | **3 of 4** | Squads 1 & 2: Active victim extraction — routing casualties to west-side Medical handoff. Squad 3: Upper floor search & rescue (floors 2–3) — same handoff routing. |
-
-### 4.2 Reserve Posture
-
-| Unit | Held in Reserve | Deployment Trigger |
-|---|---|---|
-| 3 Fire engines | Staged at station | Upper floor collapse / fire extension to adjacent structure |
-| 1 hazardous materials Truck | Staged at command post | Secondary chemical incident / decontamination corridor support |
-| 1 Rescue Unit | Staged at perimeter | Mass casualty surge / structural compromise |
-
-### 4.3 Approach & Access
-
-- **All Fire apparatus: Western Pine Street approach only.** Eastern approach via Main Street is closed — smoke-affected and congested.
-- Engine 5 approaches from the **north on Pine Street** — Traffic patrol 5 holding the north apparatus lane; patrol car A sequencing at north checkpoint.
-- Dedicated inbound apparatus corridor on Pine Street is **active and enforced** by 2 Traffic patrols.
-
----
-
-## 5. Police Department — Deployed Resources
-
-### 5.1 patrol car Deployment — 9 of 10 Available Committed
-
-| Assignment | Units | Location |
-|---|---|---|
-| North & South Pine Street Perimeter | 2 | Half-block radius — civilian access blocked |
-| East Flank — Main Street Smoke Drift Zone | 2 | Extended perimeter eastward — wind advisory; respiratory protection in use |
-| Casualty Escort & Ambulance Service Staging Protection | 1 | West staging perimeter — Medical triage area |
-| Command Post Security | 1 | Unified Command area |
-| North Checkpoint Deconfliction | 1 (patrol car A) | North side — sequencing Engine 5 and Medical north staging units |
-| hazardous materials 2 Escort | 1 (patrol car B) | Eastern corridor — Main Street sampling path; clearing civilian foot traffic ahead of hazardous materials team |
-| Oak Avenue / 3rd Street Gridlock Response | 1 (patrol car C) | Secondary route intersection — managing congestion migration |
-| **Reserve** | **1** | Staged at command post — perimeter expansion or chemical evacuation surge |
-
-### 5.2 Traffic patrol Deployment — 5 of 5 Available Committed (Fleet Fully Committed)
-
-| Assignment | Units | Location |
-|---|---|---|
-| Pine Street — Fire Apparatus Inbound Corridor | 2 | Western Pine Street — dedicated fire lane enforced |
-| Main Street Intersection Control | 1 | Diverting traffic to Oak Avenue and 3rd Street |
-| Ambulance Service Egress Route — Pine Street to Mercy General | 1 | Outbound ambulance corridor — continuous cycling confirmed |
-| North Perimeter Apparatus Lane — Engine 5 Inbound | 1 (Traffic patrol 5) | North Pine Street — holding lane for Engine 5 arrival |
-
-> **Traffic patrol fleet is fully committed.** County Traffic Division mutual aid is on standby — 5-minute request window — if secondary route gridlock escalates beyond patrol car C capacity.
-
-### 5.3 Tactical Van Deployment
-
-| Unit | Status | Location | Trigger |
-|---|---|---|---|
-| Tactical Van 1 | Active | Main Street perimeter — civilian crowd management | Ongoing |
-| Tactical Van 2 | **Pre-positioned — awaiting order** | Western edge of full-block evacuation zone — engine running, crew briefed | Deploys within **60 seconds** of Fire Chief's hazardous materials chemical confirmation call |
-
-### 5.4 Traffic Rerouting Plan
-
-```
-INCIDENT ZONE: 45 Pine Street (WC1A Bloomsbury, London)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BLOCKED:         Pine Street — full block, North & South
-                 Main Street eastbound approach (smoke drift + hazardous materials 2 sampling)
-
-FIRE APPARATUS:  Western Pine Street → dedicated inbound lane (2 Traffic patrols)
-                 Engine 5 → North approach lane (Traffic patrol 5)
-                 ALL FIRE UNITS: WESTERN APPROACH ONLY
-
-Ambulance Service EGRESS:      Pine Street westbound → Mercy General (continuous cycling — Traffic patrol 4)
-                 3rd Street corridor → St. Jude Medical (clear — opens on Medical Chief's call)
-                 Oak Avenue → County Community (monitored — patrol car C on node)
-
-hazardous materials 2:        Eastern sampling corridor — Main Street direction
-                 Escorted by patrol car B — civilian foot traffic cleared
-
-REROUTING:       city centre inbound → Oak Avenue (primary alternate)
-                 Cross-traffic → 3rd Street bypass
-                 Oak Avenue / 3rd Street node → patrol car C managing secondary congestion
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
----
-
-## 6. Medical Department — Deployed Resources
-
-### 6.1 Hospital Network — Pre-Notified and Standing By
-
-| Hospital | Available Beds | Trauma | Burn Unit | Distance | Role | Status |
-|---|---|---|---|---|---|---|
-| **Mercy General** | 12 | ✅ | ❌ | 3.5 mi | **Primary — Critical Smoke Inhalation & Trauma** | 🟢 Trauma team activated |
-| **St. Jude Medical** | 4 | ✅ | ✅ | 7.2 mi | **Secondary — Burns, Pediatric, Overflow Trauma** | 🟢 Burn unit on alert; pediatric team notified |
-| **County Community** | 25 | ❌ | ❌ | 5.0 mi | **Overflow — Ambulatory & Minor Exposure** | 🟢 Surge protocol active |
-
-**Bed Capacity Watch:** Mercy General's 12 beds are the binding constraint. If Red-tag transports approach 8, St. Jude opens as secondary trauma route and Police Chief is called to formally open 3rd Street corridor.
-
-### 6.2 Ambulance Deployment — 6 of 12 Available On Scene
-
-| Unit | Assignment | Staging | Route |
-|---|---|---|---|
-| Ambulance 1 | Critical casualties → Mercy General | West staging | Pine Street egress — continuous cycling |
-| Ambulance 2 | Critical casualties → Mercy General | West staging | Pine Street egress — continuous cycling |
-| Ambulance 3 | Burns / Pediatric → St. Jude Medical | North staging | 3rd Street corridor — **does not move until confirmed burn or pediatric patient** |
-| Ambulance 4 | Ambulatory / Minor → County Community | North staging | Oak Avenue bypass — driver checks in with patrol car C at Oak Avenue / 3rd Street |
-| Ambulance 5 *(new)* | Upper floor surge buffer — Critical | West staging | Pine Street egress → Mercy General |
-| Ambulance 6 *(new)* | Yellow-tag flexible routing | West staging | Pine Street → Mercy General OR Oak Avenue → County Community — dynamic routing per RRV 2 reassessment |
-
-> **6 Ambulances held in reserve** — staged 2 blocks west. Triggers: casualty surge, hazardous materials chemical confirmation, or Mercy General bed ceiling approached.
-
-### 6.3 Rapid Response Vehicle (RRV) Deployment — 4 of 5 Available On Scene
-
-| Unit | Assignment | Position |
-|---|---|---|
-| RRV 1 | **Forward Triage Officer** — embedded at Fire Rescue Unit west-side handoff point | West perimeter handoff — primary receiving officer |
-| RRV 2 | **Casualty Sorting & Treatment** — running START triage at west staging | West staging perimeter |
-| RRV 3 | **Roving Assessment** — ambulatory civilians at north perimeter; liaison with patrol car A at north checkpoint | North perimeter — coordinates with patrol car A for Medical unit access |
-| RRV 4 *(new)* | **Second Triage Lane** — surge throughput support alongside RRV 1 | West staging perimeter — doubles handoff capacity for Rescue Unit 3 upper floor extractions |
-
-> **1 RRV held in reserve at command post** — designated **Decontamination Triage Lead**. Deploys **only** on Fire Chief's hazardous materials chemical confirmation call. No other deployment trigger. No exceptions.
-
-### 6.4 Staging Map
-
-```
-STAGING MAP — 45 Pine Street (WC1A Bloomsbury, London)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-[NORTH STAGING]
-  Ambulance 3 (Burns/Pediatric — standby, does not move without confirmed patient)
-  Ambulance 4 (Ambulatory → County Community via Oak Avenue)
-  RRV 3 (Roving — liaison with patrol car A at north checkpoint)
-  ← Engine 5 inbound (north apparatus lane — Traffic patrol 5 holding)
-  ← patrol car A sequencing Fire and Ambulance Service at north checkpoint
-
-              ↕ (north approach — sequenced by patrol car A + Traffic patrol 5)
-
-[STRUCTURE]   45 Pine Street (WC1A Bloomsbury, London) ← Active Fire — upper floors engaged
-              Rescue Units 1, 2, 3 extracting casualties
-
-              ↕ (west handoff — primary triage point)
-
-[WEST STAGING]
-  Ambulance 1 (Critical → Mercy General — cycling)
-  Ambulance 2 (Critical → Mercy General — cycling)
-  Ambulance 5 (Upper floor surge → Mercy General)
-  Ambulance 6 (Yellow-tag flexible routing)
-  RRV 1 (Forward Triage — Rescue Unit handoff — LANE 1)
-  RRV 2 (START Triage — primary sorting)
-  RRV 4 (Second triage lane — LANE 2 — surge throughput)
-
-[EAST — NO Ambulance Service / NO CIVILIAN ACCESS]
-  Smoke drift zone — hazardous materials 2 active sampling
-  patrol car B escort — civilian foot traffic cleared
-  Ambulance Service personnel prohibited — Police Chief coordination required for any east-side access
-
-[RESERVE — 2 BLOCKS WEST]
-  6 Ambulances staged
-  1 RRV (Decontamination Triage Lead — awaiting hazardous materials call only)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-### 6.5 Triage Protocol — START | Two Lanes Active
-
-| Tag | Criteria | Destination | Transport |
-|---|---|---|---|
-| 🔴 **Red — Immediate** | Respiratory distress, altered consciousness, O₂ sat <90%, suspected chemical exposure | Mercy General — Trauma | Ambulances 1, 2, or 5 — next available |
-| 🟡 **Yellow — Delayed** | Stable but symptomatic — coughing, eye irritation, O₂ sat 90–95% | Hold at west staging — reassess every 5 min | Ambulance 6 — dynamic routing on reassessment |
-| 🟢 **Green — Minor** | Ambulatory, mild exposure, O₂ sat >95% | County Community | Ambulance 4 → Oak Avenue |
-| ⚫ **Black — Expectant** | Non-survivable per field assessment | Designated holding area — west perimeter | Chaplain notified; documentation initiated |
-| 🔥 **Burn — Confirmed** | Visible burn injury, any BSA percentage | St. Jude Medical — Burn Unit | Ambulance 3 → 3rd Street corridor |
-| 👶 **Pediatric — Any severity** | Any patient under 14 years | St. Jude Medical — Pediatrics | Ambulance 3 → 3rd Street — **immediate priority, no delay** |
-
-**Chemical Exposure Protocol — Active Until hazardous materials Clears:**
-- Supplemental O₂ on all symptomatic patients — no exceptions
-- No oral fluids until chemical clearance confirmed
-- Exposure duration and symptom onset documented on every patient
-- Chemical exposure flag on every hospital pre-notification transport
-
----
-
-## 7. Cross-Agency Coordination Agreements
-
-The following coordination commitments have been explicitly confirmed between all three agencies and are binding under this unified directive.
-
-### 7.1 Fire ↔ Police
-
-| Commitment | Detail |
+| Element | Detail |
 |---|---|
-| Western Pine Street apparatus corridor | Active and enforced by 2 Traffic patrols — Fire apparatus uses western approach only |
-| Engine 5 north approach | Traffic patrol 5 holding north apparatus lane; patrol car A sequencing at north checkpoint |
-| hazardous materials 2 escort | patrol car B escorts hazardous materials 2 through eastern sampling corridor — civilian foot traffic cleared ahead of team |
-| Chemical confirmation trigger | Fire Chief calls chemical confirmation → Police Chief immediately issues full-block evacuation order; Tactical Van 2 deploys within 60 seconds |
-| Perimeter expansion | Fire Chief calls upper floor extension → Police Chief executes perimeter expansion within 90 seconds using reserve patrol car and command post patrol car redeployment |
+| **Location** | Northern end of Kingsbourne Terrace — away from fire frontage |
+| **Anchor Unit** | Fire Incident Response Unit — IRU-1 |
+| **Fire Representative** | Fire Incident Commander — IRU-1, on-site now |
+| **Police Representative** | Police Silver Commander — en route, ETA 6 minutes |
+| **Medical Representative** | Ambulance Incident Officer (AIO) — en route, ETA 7 minutes |
+| **Physical Security** | RC-1 (Police Response Car) — forward command post perimeter |
 
-### 7.2 Fire ↔ Medical
+> ⚠️ **JLO Direction:** All command decisions, escalation calls, and inter-agency coordination are to be made from this single node. No service is to make a unilateral operational change affecting another service's assets or space without notification on Channel 4 and acknowledgement from the Forward Command Post.
 
-| Commitment | Detail |
+### 2.2 Inter-Agency Communications
+
+| Parameter | Detail |
 |---|---|
-| West-side handoff point | All Rescue Units (1, 2, 3) route extracted casualties to west perimeter — RRVs 1 and 4 are receiving officers; two triage lanes active |
-| Dual triage lane briefing | Fire Squad leaders briefed that two receiving officers are active at west perimeter — simultaneous handoff is supported |
-| hazardous materials assessment relay | Fire Chief calls chemical confirmation to Medical Chief simultaneously with Police Chief — no filtering through chain |
-| Casualty surge advance warning | Fire Chief provides advance notice if Squad 3 upper floor search is producing high numbers — Medical Chief activates reserve ambulances and county mutual aid on that warning |
-| Pediatric casualty flag | Fire Squads radio Medical Chief immediately upon extracting any patient under 14 — before patient reaches triage |
+| **Joint Radio Net** | MetFire Interop Channel 4 |
+| **Confirmed — Fire Service** | ✅ All fire units on Channel 4 |
+| **Confirmed — Police Service** | ✅ All deployed police units on Channel 4 |
+| **Confirmed — Medical Service** | ✅ All HART, RRV, and DCA crews on Channel 4 |
+| **HART Team Lead** | Dedicated radio — Channel 4 — continuous comms with Fire IC |
+| **AIO** | Carries inter-agency radio — Channel 4 — authority to release Wave 2 medical assets |
 
-### 7.3 Police ↔ Medical
-
-| Commitment | Detail |
-|---|---|
-| Pine Street egress to Mercy General | Confirmed continuous cycling — not single use. Traffic patrol 4 holds lane open for ambulance return loops |
-| 3rd Street corridor to St. Jude | Clear and available — Medical Chief calls Police Chief to formally open it the moment a confirmed burn or pediatric patient is in transport. patrol car C redirects to hold 3rd Street on that call |
-| North checkpoint access | patrol car A pre-cleared Ambulances 3, 4, and RRV 3 — units identify on approach; no delays. RRV 3 is Medical liaison at that checkpoint |
-| Oak Avenue congestion advisory | Ambulance 4 driver checks in with patrol car C at Oak Avenue / 3rd Street on every run. Police Chief advises Medical Chief in real time if Oak Avenue becomes non-viable |
-| East perimeter exclusion | No Ambulance Service personnel east of structure without Police Chief coordination. hazardous materials 2 sampling corridor is respected by all Medical units |
-| hazardous materials chemical confirmation relay | Police Chief relays chemical confirmation to Medical Chief simultaneously — not sequentially through Fire Chief |
+> **Channel 4 is the joint net from this moment. All inter-service communications, escalation notifications, and Major Incident declarations are to be transmitted on Channel 4.**
 
 ---
 
-## 8. Unified Escalation Protocol
+## SECTION 3 — FIRE SERVICE DEPLOYMENT
 
-### 8.1 hazardous materials Chemical Confirmation — Primary Decision Gate
+### 3.1 Asset Summary
 
-This is the single most consequential pending decision. All three agencies have pre-positioned for this trigger.
-
-| Agency | Action on Chemical Confirmation |
-|---|---|
-| **Fire Chief** | Calls confirmation simultaneously to Police Chief and Medical Chief. Deploys reserve hazardous materials Truck for decontamination corridor support. Escalates to full-block evacuation request. |
-| **Police Chief** | Issues full-block evacuation order immediately. Tactical Van 2 deploys within 60 seconds. Reserve patrol car moves to support evacuation surge. County Traffic mutual aid requested if needed. |
-| **Medical Chief** | Decontamination RRV deploys immediately from command post. All three hospitals notified of chemical protocol activation. Reserve ambulances activated for decontamination transport. |
-
-### 8.2 Escalation Trigger Matrix
-
-| Trigger | Fire Response | Police Response | Medical Response |
-|---|---|---|---|
-| **hazardous materials chemical confirmation** | Reserve hazardous materials + decontamination corridor | Full-block evacuation; Van 2 in 60 sec | Decon RRV deploys; hospitals on chemical protocol; reserve ambulances activate |
-| **Upper floor fire extension confirmed** | Reserve Engines deploy | Perimeter expansion in 90 sec; reserve patrol car moves | Reserve ambulances activate; county Ambulance Service mutual aid placed |
-| **Casualty surge (10+ patients)** | Squad 3 extraction rate reported to command | 3rd Street corridor formally opened if needed | Mass casualty declaration; county Ambulance Service mutual aid (12–15 min ETA) |
-| **Mercy General bed ceiling approached (8+ Red-tag)** | No change to Fire posture | 3rd Street corridor formally opened on Medical Chief's call | St. Jude opened as secondary trauma route |
-| **Confirmed burn casualty** | Squad leader radios Medical Chief immediately | 3rd Street corridor opened on Medical Chief's call | Ambulance 3 moves immediately to St. Jude |
-| **Confirmed pediatric casualty** | Squad leader radios Medical Chief immediately — priority call | 3rd Street corridor opened on Medical Chief's call | Ambulance 3 moves immediately — no delay |
-| **Oak Avenue non-viable** | No change to Fire posture | Police Chief advises Medical Chief; alternate route coordinated | Ambulance 4 rerouted in real time with Police Chief |
-| **Adjacent structure fire extension** | Reserve Engines deploy; Engine 5 pivots to active suppression | Perimeter expansion; additional civilian evacuation | Assess for additional casualty exposure; reserve ambulances on standby |
-
----
-
-## 9. Reserve Posture — All Agencies Consolidated
-
-| Agency | Resource | Quantity | Staged Location | Deployment Trigger |
+| Asset | Dispatched | Fleet Total | Held in Reserve | Status |
 |---|---|---|---|---|
-| **Fire** | Fire engines | 3 | Station | Upper floor collapse / adjacent structure extension |
-| **Fire** | hazardous materials Truck | 1 | Command post | Secondary chemical incident / decon corridor |
-| **Fire** | Rescue Unit | 1 | Perimeter | Mass casualty surge / structural compromise |
-| **Police** | patrol car | 1 | Command post | Perimeter expansion / chemical evacuation surge |
-| **Police** | Tactical Van 2 | 1 | Western evacuation zone edge — pre-positioned | hazardous materials chemical confirmation — 60-second deploy |
-| **Police** | County Traffic Mutual Aid | On standby | Off-site — 5 min to request | Full Traffic patrol fleet committed; secondary route gridlock escalation |
-| **Medical** | Ambulances | 6 | 2 blocks west | Casualty surge / hazardous materials confirmation / Mercy General bed ceiling |
-| **Medical** | Rapid Response Vehicle (RRV) (Decon Lead) | 1 | Command post | hazardous materials chemical confirmation only — no other trigger |
-| **Medical** | County Ambulance Service Mutual Aid | On standby | Off-site — 12–15 min ETA | Mass casualty declaration (10+ patients) |
+| **Pumping Appliances** | 3 of 5 | 5 | 2 on standby | ✅ Moving |
+| **Aerial Ladder Platform** | 1 of 2 | 2 | 1 on standby | ✅ Moving |
+| **Incident Response Unit** | 1 of 2 | 2 | 1 on standby | ✅ Moving |
 
----
+> **Response Grade: Make Pumps 3.** One ALP and one IRU are confirmed held in reserve. If persons are confirmed on floors 2 or 3, or structural compromise is identified, the Fire Chief can surge a second ALP and second IRU without requiring mutual aid in the first instance. This is a significant operational advantage and all services should plan accordingly.
 
-## 10. Immediate Priorities — Next 15 Minutes
+### 3.2 Pumping Appliance Assignments
 
-These four items are the active decision gates for this incident. All reports come directly to Unified Command.
-
-| Priority | Item | Owner | Expected ETA |
-|---|---|---|---|
-| **1** | **hazardous materials smoke composition assessment result** — chemical or non-chemical confirmation | Fire Chief (hazardous materials 1 & 2) | **10–15 minutes** |
-| **2** | **Upper floor fire status** — Engine 4 reports on fire extension to floors 2 & 3 | Fire Chief (Engine 4) | Within minutes of deployment |
-| **3** | **Casualty count update** — Squad 3 upper floor search produces victim numbers | Fire Chief / Medical Chief | Ongoing — Squad 3 active now |
-| **4** | **Adjacent structure exposure assessment** — Engine 5 reports on fire spread risk | Fire Chief (Engine 5) | Within minutes of north staging |
-
----
-
-## 11. Universal Standing Orders — All Personnel On Scene
-
-The following orders apply to all Fire, Police, and Medical personnel operating at this incident. No agency-specific override without Unified Command authorization.
-
-1. **No civilian vehicles inside the perimeter** — no exceptions, no override without Police Chief authorization
-2. **All Fire apparatus use western Pine Street approach only** — eastern approach is closed
-3. **Engine 5 north approach lane is active** — Traffic patrol 5 holds it; patrol car A sequences north checkpoint
-4. **Ambulance Service egress lane — Pine Street to Mercy General — stays open for continuous ambulance cycling** — not single use
-5. **No Ambulance Service or civilian personnel east of the structure** — hazardous materials 2 sampling corridor is active; patrol car B escort in effect; any east-side access requires Police Chief coordination
-6. **Wind advisory in effect** — respiratory protection mandatory for all personnel east of the structure
-7. **All casualties treated as potential chemical exposure** until hazardous materials clears — O₂ on all symptomatic patients, no oral fluids, exposure duration documented on every patient
-8. **West-side handoff only** from Fire Rescue Units — RRVs 1 and 4 are both receiving; two triage lanes active
-9. **Hospital pre-notification required before every transport** — Mercy General and St. Jude on dedicated radio channel
-10. **Pediatric casualty — immediate radio call to Medical Chief** before patient reaches triage; Ambulance 3 and St. Jude are pre-positioned
-11. **Ambulance 3 does not move** until a confirmed burn or pediatric patient is in extraction
-12. **Decontamination RRV at command post does not deploy** for any reason except hazardous materials chemical confirmation
-13. **Tactical Van 2 does not redeploy** without Police Chief order
-14. **Any perimeter breach, crowd escalation, apparatus obstruction, or structural change** — report directly to Unified Command immediately; do not manage alone
-15. **hazardous materials chemical confirmation is relayed simultaneously to all three Chiefs** — no sequential filtering
-
----
-
-## 12. Communications Protocol
-
-| Channel | Users | Purpose |
+| Unit | Primary Role | Position |
 |---|---|---|
-| **Unified Command Channel** | Fire Chief, Police Chief, Medical Chief, JLO | All cross-agency escalation, confirmation calls, and decision gates |
-| **Fire Tactical Channel** | Fire engines, hazardous materials, Rescue Units | Suppression, extraction, and hazardous materials assessment coordination |
-| **Police Operations Channel** | All patrol cars, Traffic patrols, Tactical Vans | Perimeter, traffic, and escort coordination |
-| **Medical Operations Channel** | All Ambulances, RRVs | Triage, transport, and hospital pre-notification |
-| **Hospital Dedicated Channel** | Medical Chief, Mercy General, St. Jude Medical | Pre-notification and incoming patient advisories |
+| **PA-1** | Primary fire attack — ground and first floor | Forward, Kingsbourne Terrace frontage |
+| **PA-2** | Search and rescue — upper floors, joint operation with HART | Rear access / secondary entry point |
+| **PA-3** | Water supply, relay, backup attack line | Lamb's Conduit Street junction — western side, 3.5m hose run lane held by RPU Charlie |
 
-**All hazardous materials assessment results, chemical confirmation calls, and mass casualty declarations are transmitted on the Unified Command Channel simultaneously to all three Chiefs.**
+> **PA-2 / HART Interface:** PA-2 is the primary extraction interface for the Medical HART team. All casualties extracted from upper floors by PA-2 and HART are handed to RRV-3 at the **northern end of Kingsbourne Terrace** — not at the building threshold. HART does not escort casualties beyond the handover point; they return to the hazard zone for the next extraction.
+
+### 3.3 Aerial Ladder Platform Assignment
+
+| Unit | Role | Operating Position | Standing Requirement |
+|---|---|---|---|
+| **ALP-1** | Upper floor rescue and elevated firefighting — floors 2 and 3 | Kingsbourne Terrace direct frontage | **15 metres minimum — firm, level, clear** |
+
+> ✅ **ALP Standing Confirmed:** RPU Charlie (Police) is physically enforcing a 15-metre minimum clear standing on the Kingsbourne Terrace frontage. No vehicles, hose lines, or personnel will enter that envelope. ALP-1 may extend on arrival without further clearance checks.
+
+> ⚠️ **ALP Operating Envelope — All Services:** The ALP operating envelope extends approximately 20 metres laterally from its standing point. The CCP at Lamb's Conduit Street junction is confirmed outside this envelope and is safe. **No personnel or vehicles are to approach the ALP from the front or sides once the platform is extended.** HART team entry and exit is via rear access with PA-2 only — not through the ALP envelope. All services are briefed.
+
+### 3.4 Incident Response Unit
+
+| Unit | Role | Location |
+|---|---|---|
+| **IRU-1** | Incident Command, logistics, specialist support, inter-agency coordination hub | Northern end of Kingsbourne Terrace — Forward Command Post |
+
+### 3.5 Fire Service Escalation Triggers
+
+| Trigger | Fire Response |
+|---|---|
+| Persons confirmed on floors 2 or 3 | Release ALP-2 from standby — immediate |
+| Structural integrity in question | Release IRU-2 from standby; request mutual aid pumping appliances |
+| Major Incident declared | Full surge — ALP-2, IRU-2, mutual aid PAs; LFB Control pre-notified |
+| Suspicious origin confirmed | Preserve approach/egress routes as crime scene; coordinate with Police Chief on Channel 4 immediately |
+
+> **LFB Control Pre-Notification:** The Fire Chief has pre-notified LFB Control of the incident profile and requested two mutual aid pumping appliances be held at the nearest available station. If escalation beyond Make Pumps 3 is required, that conversation does not start from zero.
 
 ---
 
-*This directive reflects the full agreed-upon collaborative plan as coordinated between the Fire Chief, Police Chief, and Medical Chief. It supersedes all prior individual agency dispatches and serves as the single authoritative operational document for this incident until the next Unified Command update.*
+## SECTION 4 — POLICE SERVICE DEPLOYMENT
 
-*Next scheduled reassessment: Upon hazardous materials assessment result — estimated 10–15 minutes.*
+### 4.1 Asset Summary
 
-**— Joint Liaison Officer | Unified Command | 45 Pine Street (WC1A Bloomsbury, London) Structure Fire**
+| Resource | Available | Deployed | Held in Reserve |
+|---|---|---|---|
+| **Roads Policing Units** | 3 of 4 | 3 | 1 at base |
+| **Response Cars** | 8 of 12 | 6 | 2 on-scene reserve |
+| **Armed Response Vehicles** | 2 of 3 | 2 (outer cordon) | 1 at base |
+| **Police Support Unit Vans** | 2 of 3 | 2 | 1 at base |
 
+### 4.2 Roads Policing Units
+
+| Unit | Assignment | Location | Status |
+|---|---|---|---|
+| **RPU Alpha** | High Holborn clearance — westbound | Holborn Circus to Procter Street | ✅ Moving |
+| **RPU Bravo** | High Holborn clearance — eastbound | Gray's Inn Road junction to Procter Street | ✅ Moving |
+| **RPU Charlie** | ALP corridor enforcement + PA-3 hose run lane management | Kingsbourne Terrace / Lamb's Conduit Street junction | ✅ Moving |
+
+> **Corridor Clearance ETA:** RPU Alpha and Bravo report High Holborn will be workable within **8–10 minutes** of deployment. Gray's Inn Road is confirmed clear now and is the primary approach route for all fire and medical assets.
+
+> ✅ **RPU Charlie Dual Brief Confirmed:** RPU Charlie is managing both the 15-metre ALP standing on Kingsbourne Terrace frontage and the 3.5-metre western hose run lane at Lamb's Conduit Street junction simultaneously. Road geometry and confirmed clear weather make this achievable from a single position.
+
+### 4.3 Response Cars
+
+| Unit | Assignment | Location |
+|---|---|---|
+| **RC-1** | Forward command post perimeter security | Kingsbourne Terrace, northern end |
+| **RC-2** | CCP hard exclusion zone — Lamb's Conduit Street junction | CCP perimeter |
+| **RC-3** | Southern cordon — public and press exclusion | High Holborn frontage |
+| **RC-4** | Southern cordon — support to RC-3 | High Holborn frontage |
+| **RC-5** | Theobald's Road diversion management + Wave 2 medical staging bay | Theobald's Road, northern side |
+| **RC-6** | Holborn Viaduct diversion — southbound traffic management | Holborn Viaduct |
+| **RC-7** | **On-scene reserve** — escalation, mutual aid escort, pedestrian management | On-scene reserve |
+| **RC-8** | **On-scene reserve** — escalation, cordon reinforcement | On-scene reserve |
+
+> ✅ **CCP Exclusion Zone Confirmed:** RC-2 is dedicated solely to the CCP perimeter at Lamb's Conduit Street junction. This is a hard exclusion zone — no public, no press, no non-essential vehicles at any time. RC-1 provides a second exclusion layer on the northern approach.
+
+> ✅ **Theobald's Road Staging Bay Confirmed:** RC-5 is holding a minimum 3-vehicle bay on the northern side of Theobald's Road for Wave 2 medical assets (DCA-4, DCA-5, DCA-6, RRV-4). RC-5 is managing both the diversion point and the staging bay from the same position. Wave 2 medical drivers are briefed to identify RC-5 on arrival for bay allocation and on departure for sequenced release.
+
+### 4.4 Police Support Unit Vans
+
+| Unit | Assignment | Location |
+|---|---|---|
+| **PSU Van Alpha** | Hard cordon — eastern perimeter | Kingsbourne Terrace / High Holborn corner |
+| **PSU Van Bravo** | Hard cordon — western perimeter | Opposite building frontage |
+
+> PSU Vans are physically blocking and holding the cordon at **50 metres minimum** on both accessible sides. RC-7 and RC-8 are held in reserve to reinforce the cordon line without pulling from any active assignment if bystander or press pressure increases.
+
+### 4.5 Armed Response Vehicles
+
+| Unit | Assignment | Location |
+|---|---|---|
+| **ARV-1** | Outer cordon — available if threat confirmed | Gray's Inn Road staging point |
+| **ARV-2** | Outer cordon — available if threat confirmed | Holborn Viaduct staging point |
+
+> ARVs are not committed to the inner perimeter and will not interfere with fire or medical operating space. One ARV remains in reserve at base. If suspicious origin is confirmed or a secondary threat is identified, the Fire Chief or any Silver Commander notifies the Police Chief directly on Channel 4 — immediate escalation to full armed containment posture will follow.
+
+### 4.6 Diversion Routes — Active and Confirmed
+
+| Route | Direction | Status | Asset Holding |
+|---|---|---|---|
+| **Gray's Inn Road** | Northbound approach to incident | ✅ Clear — primary approach | RPU Bravo |
+| **Theobald's Road** | Northern bypass / outer staging | ✅ Clear | RC-5 |
+| **Holborn Viaduct** | Southbound diversion from High Holborn | ✅ Clear | RC-6 |
+| **High Holborn** | ❌ Avoid entirely | ⚠️ Severe congestion — road works at Holborn Circus | RPU Alpha + RPU Bravo clearing |
+
+> **TfL Liaison Active:** Bus routes 19, 38, 55, and 243 are being suppressed through the High Holborn corridor. Signal override on the Holborn gyratory has been requested to assist diversion flow. TfL Surface Operations have acknowledged.
+
+> ⚠️ **JLO Direction — Routing Rule:** **No fire or medical asset is to route via High Holborn under any circumstances.** Gray's Inn Road northbound is the confirmed primary approach for all services. This rule is absolute until High Holborn clearance is confirmed by RPU Alpha and Bravo on Channel 4.
+
+### 4.7 Police Escalation Posture
+
+| Trigger | Police Response |
+|---|---|
+| Major Incident declared | Release RC-7 and RC-8 to active deployment; request further PSU serial from borough; task reserve ARV from base |
+| Suspicious origin confirmed | Kingsbourne Terrace approach and egress routes treated as crime scene in parallel with live rescue; ARV-1 and ARV-2 reposition to inner containment |
+| Cordon under independent pressure | RC-7 and RC-8 reinforce cordon line without pulling from active assignments |
+
+> **Borough Mutual Aid:** The Police Chief is pre-drafting a borough PSU reinforcement request. This will not be submitted until the Fire Chief commits reserve assets, unless the cordon comes under independent pressure requiring it sooner.
+
+---
+
+## SECTION 5 — MEDICAL SERVICE DEPLOYMENT
+
+### 5.1 Asset Summary
+
+| Resource | Available | Committed to Scene | Staged in Reserve |
+|---|---|---|---|
+| **HART Team** | 1 of 1 | 1 — forward command post | 0 |
+| **Rapid Response Vehicles** | 4 of 4 | 3 — CCP + forward staging | 1 — Theobald's Road |
+| **Double-Crewed Ambulances** | 6 of 6 | 3 — Wave 1, CCP | 3 — Wave 2, Theobald's Road |
+
+### 5.2 HART Team
+
+**Routing:** Gray's Inn Road northbound → Kingsbourne Terrace northern end
+**Destination:** Forward Command Post, IRU-1 — direct coordination with Fire Incident Commander
+**Status:** ✅ Moving
+
+**HART Team Lead Briefing — Confirmed:**
+- All entry into the hazard zone is authorised and coordinated through the Fire IC on IRU-1. No self-deployment.
+- ALP operating envelope: no approach to the building through the ALP frontage once the platform is extended. All HART entry and exit via rear access with PA-2 only.
+- Casualty handover point: northern end of Kingsbourne Terrace to RRV-3. HART does not escort casualties beyond that point.
+- Channel 4: HART team lead maintains continuous comms with Fire IC throughout.
+
+### 5.3 Rapid Response Vehicles
+
+| Unit | Role | Position | Routing | Status |
+|---|---|---|---|---|
+| **RRV-1** | Primary triage officer — CCP | Lamb's Conduit Street junction | Gray's Inn Road | ✅ Moving |
+| **RRV-2** | Secondary triage, airway support, walking wounded management — CCP | Lamb's Conduit Street junction | Gray's Inn Road | ✅ Moving |
+| **RRV-3** | Forward staging — receives HART/PA-2 extractions, transfers to CCP | Northern end, Kingsbourne Terrace | Gray's Inn Road | ✅ Moving |
+| **RRV-4** | Outer staging — escalation reserve or secondary CCP if casualty surge | Theobald's Road, 3-vehicle bay | Theobald's Road | ✅ Staged — RC-5 aware |
+
+### 5.4 Double-Crewed Ambulances — Wave Deployment
+
+#### Wave 1 — 3 DCAs Committed to Scene
+
+| Unit | Role | Destination | Routing | Status |
+|---|---|---|---|---|
+| **DCA-1** | Priority transport — critical smoke inhalation, CO poisoning | **St. Aldric's General** (OPEL 1, 8 min, resus cleared) | Gray's Inn Road | ✅ Moving |
+| **DCA-2** | Priority transport — burns casualties, airway burns | **Northgate University Hospital** (OPEL 2, 12 min, Burns + MTC activating) | Gray's Inn Road | ✅ Moving |
+| **DCA-3** | Flex transport — triage-dependent | **St. Aldric's or Northgate** — AIO decision at point of loading | Gray's Inn Road | ✅ Moving |
+
+> **CCP Loading Discipline:** DCA-1, DCA-2, and DCA-3 are sequenced — one loads and clears before the next pulls forward. RRV-1 manages the loading sequence. This prevents the CCP junction from becoming a vehicle bottleneck and keeps the PA-3 hose run lane on the western side of Lamb's Conduit Street clear.
+
+#### Wave 2 — 3 DCAs Held at Outer Staging
+
+| Unit | Role | Staging Location | Release Trigger |
+|---|---|---|---|
+| **DCA-4** | Standby — upper floor extractions or casualty surge | Theobald's Road, 3-vehicle bay | Persons confirmed extracted from floors 2 or 3, OR Major Incident declared |
+| **DCA-5** | Standby — casualty surge or second burns run to Northgate | Theobald's Road, 3-vehicle bay | Casualty numbers exceed Wave 1 transport capacity |
+| **DCA-6** | Walking wounded shuttle — Holborn Community Health Centre | Theobald's Road, 3-vehicle bay | Walking wounded volume at CCP exceeds RRV-2 triage capacity |
+
+> **Release Authority:** The AIO at the Forward Command Post has full authority to release Wave 2 DCAs individually and sequentially without referral upward, unless a Major Incident is declared — in which case all three release simultaneously and mutual aid is requested in the same action.
+
+### 5.5 Hospital Pre-Alert Status
+
+| Hospital | OPEL | Beds | MTC | Burns Beds | ETA | Pre-Alert Status | Primary Use |
+|---|---|---|---|---|---|---|---|
+| **Northgate University Hospital** | 2 | 8 | ✅ Yes | ✅ 4 beds | 12 min | ✅ Burns Pathway + Major Trauma Team activating | Critical burns, airway burns, major trauma |
+| **St. Aldric's General Hospital** | 1 | 18 | ❌ No | ❌ None | 8 min | ✅ Resus bays clearing | Smoke inhalation, CO poisoning, moderate trauma |
+| **Holborn Community Health Centre** | 1 | 15 | ❌ No | ❌ None | 5 min | ✅ Minor injuries unit prepared | Walking wounded, ambulatory smoke inhalation only |
+
+> ⚠️ **Northgate Burns Capacity — Live Monitoring:** With 4 burns beds available and potential for multiple upper floor burns casualties, Northgate will reach burns capacity quickly. The Medical Chief is maintaining a live bed status call with Northgate's bed manager. If burns beds are exhausted, diversion to the next nearest burns-capable facility will be enacted and both Chiefs notified on Channel 4 before the next burns casualty departs the CCP.
+
+> ⚠️ **Critical Triage Rules — Non-Negotiable:**
+> - **Airway burns:** Any casualty with suspected airway burns (singed nasal hair, hoarse voice, stridor, facial burns) is P1 Immediate and routes directly to Northgate regardless of apparent stability. Airway burns can deteriorate rapidly.
+> - **CO poisoning:** All smoke inhalation casualties receive high-flow oxygen via non-rebreather mask at the CCP regardless of SpO₂ reading. CO poisoning is clinically silent on pulse oximetry. This is absolute.
+
+### 5.6 Anticipated Casualty Profile
+
+| Wave | Presentation | Triage Priority | Destination |
+|---|---|---|---|
+| **Wave 1 — Immediate** | Smoke inhalation, CO poisoning, respiratory compromise | P1/P2 | St. Aldric's General |
+| **Wave 2 — Extraction-dependent** | Burns (partial/full thickness), airway burns, upper floor extractions | P1 | Northgate University Hospital |
+| **Wave 3 — Delayed** | Evacuation trauma — falls, crush, exertion collapse, vulnerable persons | P2/P3 | St. Aldric's or Holborn CHC — severity dependent |
+
+> **Minimum planning assumption: 10–15 casualties.** Medical service is not waiting for confirmation before staging accordingly.
+
+### 5.7 Medical Escalation Posture
+
+If the Fire Chief declares a Major Incident, the Medical Chief will within 60 seconds:
+1. Release all Wave 2 DCAs simultaneously
+2. Transmit mutual aid request to LAS Control for additional DCAs and a second HART team
+3. Escalate Northgate pre-alert to full Major Trauma activation
+4. Open St. Aldric's as secondary receiving centre for overflow
+5. Notify both Chiefs on Channel 4
+
+> **METHANE Transmission:** Formal METHANE report has been transmitted to LAS Control. The wider system is aware. Mutual aid assets are being pre-positioned at the nearest available stations.
+
+---
+
+## SECTION 6 — CASUALTY COLLECTION POINT
+
+| Parameter | Detail |
+|---|---|
+| **Location** | Lamb's Conduit Street junction with Kingsbourne Terrace — northern side |
+| **Exclusion Zone** | ✅ RC-2 dedicated — hard exclusion, no public, no press, no non-essential vehicles |
+| **ALP Envelope** | ✅ CCP is outside the 20-metre ALP operating envelope — confirmed safe |
+| **Hose Run Conflict** | ✅ PA-3 hose run on western side of junction — DCA loading sequenced to avoid conflict |
+
+| Zone | Function | Staffed By |
+|---|---|---|
+| **Triage area** | P1/P2/P3 triage — METHANE/MIMMS framework | RRV-1 |
+| **Treatment area** | Airway management, high-flow O₂, IV access, burns dressing, analgesia | RRV-1 + RRV-2 |
+| **Loading point** | Sequential DCA loading — one vehicle at a time | RRV-1 managing sequence |
+| **Walking wounded holding** | Ambulatory casualties held and monitored, separate from treatment area | RRV-2 (until DCA-6 released) |
+| **Forward handover point** | HART/PA-2 extractions received, transferred to CCP | RRV-3 → CCP |
+
+> ⚠️ **JLO Direction — Casualty Dispersal Rule:** All casualties — including those who self-evacuate — are to be directed to the CCP at Lamb's Conduit Street junction. Fire crews on all three PAs are briefed to redirect any casualty presenting at the building threshold or at individual vehicles to the CCP. Casualty dispersal to multiple points will degrade the triage picture and is not permitted.
+
+---
+
+## SECTION 7 — ROUTING SUMMARY
+
+| Route | Status | Assets Using |
+|---|---|---|
+| **Gray's Inn Road (northbound)** | ✅ Confirmed clear — primary approach | Fire appliances; HART; RRV-1, RRV-2, RRV-3; DCA-1, DCA-2, DCA-3 |
+| **Theobald's Road (outer staging)** | ✅ RC-5 holding 3-vehicle bay | RRV-4; DCA-4, DCA-5, DCA-6 |
+| **Holborn Viaduct** | ✅ Clear — southbound diversion only | RC-6 managing; no fire or medical approach |
+| **High Holborn** | ❌ Avoid entirely | No fire or medical assets — gridlock confirmed, RPU Alpha and Bravo clearing |
+
+**Return Transport Routing:**
+- **St. Aldric's runs (DCA-1, DCA-3):** Gray's Inn Road → Theobald's Road return corridor → turnaround approximately 20–25 minutes
+- **Northgate runs (DCA-2):** Gray's Inn Road northbound → 12-minute ETA → available for second run in approximately 35–40 minutes; if burns bed capacity is exhausted on arrival, DCA-2 crew notifies AIO on Channel 4 before departure for second run
+
+---
+
+## SECTION 8 — ENVIRONMENTAL CONDITIONS
+
+| Check | Status | Detail |
+|---|---|---|
+| **Active weather warnings** | ✅ None | No weather hazards affecting the incident area |
+| **Kingsbourne Terrace surface** | ✅ Clear | ALP standing surface not compromised — dry, level, no ice |
+| **Gray's Inn Road** | ✅ Clear | No hazards — confirmed Category 1 diversion route |
+| **Theobald's Road** | ✅ Clear | Viable outer staging route |
+| **Holborn Viaduct** | ✅ Clear | Viable southbound diversion |
+| **High Holborn** | ⚠️ Severe congestion | Road works near Holborn Circus — 15+ minute delays |
+
+> Clear weather and absence of additional road hazards provide a stable cordon geometry and predictable vehicle handling conditions across the entire operational area.
+
+---
+
+## SECTION 9 — CONFIRMED INTER-AGENCY AGREEMENTS
+
+The following points have been explicitly confirmed by all relevant parties and are binding for this incident:
+
+| Agreement | Confirmed By | Status |
+|---|---|---|
+| MetFire Interop Channel 4 as joint net — all units, all services | Fire Chief, Police Chief, Medical Chief | ✅ All units confirmed |
+| Forward Command Post at northern end of Kingsbourne Terrace — all three Silver Commanders present | All three Chiefs | ✅ Confirmed |
+| Gray's Inn Road as primary approach — no fire or medical asset via High Holborn | All three Chiefs | ✅ Confirmed |
+| CCP at Lamb's Conduit Street junction — northern side, hard exclusion zone | Fire Chief (requested), Police Chief (RC-2 confirmed), Medical Chief (staffed) | ✅ Confirmed |
+| ALP-1 standing — 15 metres minimum, Kingsbourne Terrace frontage | Fire Chief (requested), Police Chief (RPU Charlie confirmed) | ✅ Confirmed |
+| PA-3 hose run lane — 3.5 metres, western side of Lamb's Conduit Street junction | Fire Chief (requested), Police Chief (RPU Charlie confirmed) | ✅ Confirmed |
+| Wave 2 DCA staging bay — minimum 3 vehicles, northern side of Theobald's Road | Medical Chief (requested), Police Chief (RC-5 confirmed) | ✅ Confirmed |
+| HART team briefed on ALP envelope and rear-access routing via PA-2 | Fire Chief (requested), Medical Chief (confirmed and briefed) | ✅ Confirmed |
+| All casualties directed to CCP — not to individual vehicles | Fire Chief (requested), Medical Chief (reaffirmed), Fire IC briefing all PA crews | ✅ Confirmed |
+| Wave 2 DCA release authority held by AIO — no referral upward unless Major Incident declared | Medical Chief | ✅ Confirmed |
+| Northgate burns capacity under live monitoring — diversion notification on Channel 4 if exhausted | Medical Chief | ✅ Active |
+| METHANE report transmitted to LAS Control | Medical Chief | ✅ Transmitted |
+| TfL liaison active — bus routes 19, 38, 55, 243 suppressed; Holborn gyratory signal override requested | Police Chief | ✅ TfL acknowledged |
+| LFB Control pre-notified — two mutual aid pumping appliances held at nearest available station | Fire Chief | ✅ Confirmed |
+| Borough PSU mutual aid request pre-drafted — ready to transmit on Major Incident declaration | Police Chief | ✅ Pre-drafted |
+| Major Incident mutual aid request pre-drafted — transmits within 60 seconds of declaration | Medical Chief | ✅ Pre-drafted |
+| Scene integrity — approach and egress routes preserved as potential crime scene if suspicious origin confirmed | Police Chief (briefed all officers) | ✅ Confirmed |
+
+---
+
+## SECTION 10 — ESCALATION FRAMEWORK
+
+### 10.1 Major Incident Declaration Triggers
+
+| Trigger | Declaring Authority |
+|---|---|
+| Persons confirmed on floors 2 or 3 | Fire Chief |
+| Structural integrity in question | Fire Chief |
+| Casualty numbers exceed Wave 1 medical capacity | Medical Chief / AIO |
+| Confirmed secondary threat or deliberate ignition | Police Chief |
+
+### 10.2 Actions on Major Incident Declaration
+
+| Service | Immediate Actions |
+|---|---|
+| **Fire** | Release ALP-2 and IRU-2 from standby; activate LFB mutual aid pumping appliances |
+| **Police** | Release RC-7 and RC-8; request borough PSU serial; task reserve ARV from base |
+| **Medical** | Release all Wave 2 DCAs simultaneously; transmit LAS mutual aid request (additional DCAs + second HART); escalate Northgate to full Major Trauma activation; open St. Aldric's as secondary receiving centre |
+| **All** | Notify all units on Channel 4; scale Forward Command Post accordingly |
+
+### 10.3 Escalation Asset Summary
+
+| Service | Reserve Assets Available Without Mutual Aid |
+|---|---|
+| **Fire** | 1 × ALP, 1 × IRU, 2 × Pumping Appliances |
+| **Police** | RC-7, RC-8 (on-scene); 1 × ARV (base); 1 × PSU Van (base); 1 × RPU (base) |
+| **Medical** | DCA-4, DCA-5, DCA-6 (Theobald's Road); RRV-4 (Theobald's Road) |
+
+---
+
+## SECTION 11 — JLO OPERATIONAL NOTES
+
+1. **Single Command Node:** All three Silver Commanders are converging on the Forward Command Post at the northern end of Kingsbourne Terrace. No operational decision affecting another service's assets or space is to be made unilaterally. Channel 4 is the coordination mechanism.
+
+2. **Routing Discipline is Absolute:** Gray's Inn Road northbound is the only confirmed approach for all fire and medical assets. High Holborn is closed to all emergency vehicles until RPU Alpha and Bravo confirm clearance on Channel 4. This rule does not bend.
+
+3. **CCP Integrity:** The CCP at Lamb's Conduit Street junction is the single casualty management point for this incident. Casualty dispersal to multiple locations degrades the triage picture and risks patients being missed. All crews — fire, police, and medical — are to enforce the single-CCP rule without exception.
+
+4. **Northgate Capacity is a Live Risk:** With 4 burns beds and OPEL 2 status, Northgate will reach burns capacity if multiple upper floor casualties present with burns. The Medical Chief's live monitoring protocol is the correct mitigation. Both Chiefs are to expect a Channel 4 notification if diversion becomes necessary and are not to route burns casualties to Northgate without AIO confirmation.
+
+5. **Reserve Posture is Strong — Do Not Over-Commit Early:** All three services have meaningful reserves. The wave deployment model for medical assets, the held fire appliances, and the police on-scene reserve cars exist precisely to handle escalation without a mutual aid gap. Premature commitment of reserves degrades the escalation posture. Release authority is clearly defined and must be respected.
+
+6. **Scene Integrity from the Outset:** All officers are briefed not to disturb potential evidence in approach and egress routes. If suspicious origin is confirmed at any point, the Police Chief is to be notified immediately on Channel 4. The transition to a parallel crime scene investigation will be managed without interrupting the live rescue operation.
+
+7. **Weather is Not a Factor — Do Not Revisit:** Conditions are confirmed clear. ALP standing surface is dry and level. Cordon geometry is stable. This assessment stands unless conditions change materially, in which case the Police Chief will notify on Channel 4.
+
+---
+
+## SECTION 12 — OPERATIONAL STATUS SNAPSHOT
+
+| Element | Status |
+|---|---|
+| **Forward Command Post** | Establishing — Fire IC on-site; Police Silver ETA 6 min; AIO ETA 7 min |
+| **Joint Radio Net — Channel 4** | ✅ Active — all three services confirmed |
+| **High Holborn Clearance** | ⏳ In progress — ETA 8–10 minutes (RPU Alpha + Bravo) |
+| **Gray's Inn Road Approach** | ✅ Clear and open now |
+| **ALP-1 Standing** | ✅ Secured and enforced by RPU Charlie |
+| **PA-3 Hose Run Lane** | ✅ Secured and enforced by RPU Charlie |
+| **CCP — Lamb's Conduit Street** | ✅ Confirmed, staffed, exclusion zone active (RC-2) |
+| **Wave 2 Staging Bay — Theobald's Road** | ✅ Confirmed, 3-vehicle bay held (RC-5) |
+| **HART Team** | ✅ Moving — ETA to Forward Command Post imminent |
+| **Wave 1 DCAs** | ✅ Moving via Gray's Inn Road |
+| **Wave 2 DCAs** | ✅ Staged — Theobald's Road, awaiting AIO release |
+| **Hospital Pre-Alerts** | ✅ All three facilities notified and activating |
+| **Northgate Burns Monitoring** | ✅ Live bed status call active |
+| **METHANE Transmitted** | ✅ LAS Control aware |
+| **LFB Mutual Aid Pre-Positioned** | ✅ Two pumping appliances held at nearest station |
+| **TfL Liaison** | ✅ Bus suppression and signal override acknowledged |
+| **Major Incident Pre-Drafts** | ✅ Police and Medical mutual aid requests ready — 60-second transmission |
+
+---
+
+*This directive is issued on the authority of the Joint Liaison Officer and reflects the fully agreed operational positions of the Fire Chief, Police Chief, and Medical Chief as of the time of compilation. It supersedes all individual service briefings for the purposes of inter-agency coordination. All amendments are to be transmitted on MetFire Interop Channel 4 and acknowledged by all three Silver Commanders before taking effect.*
+
+**MetFire Interop Channel 4 — All Units, All Services**
+*— Joint Liaison Officer, Unified Command*

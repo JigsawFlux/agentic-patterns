@@ -1,10 +1,9 @@
 # patterns/dag.py
-import os
 import json
 from typing import TypedDict, List
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
@@ -21,17 +20,11 @@ class DAGState(TypedDict):
     traffic_report: str
     final_report: str
 
-def get_model(temperature=0.1):
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=temperature
-    )
 
 # 1. Triage Agent Node: Classifies incident and pulls out key metrics
 def triage_agent_node(state: DAGState):
     print("\n[DAG Pipeline] 📋 1. Triage Agent: Parsing incident metrics...")
-    model = get_model()
+    model = get_llm()
     
     prompt = (
         f"Incident Description:\n{state['incident']}\n\n"
@@ -54,7 +47,7 @@ def triage_agent_node(state: DAGState):
 # 2. Resource Allocator Agent Node: Manages responder allocations and hospital selection
 def resource_allocator_node(state: DAGState):
     print("\n[DAG Pipeline] 🚑 2. Resource Allocator: Allocating responders & hospitals...")
-    model = get_model()
+    model = get_llm()
     tools = [check_responder_availability, query_hospital_status, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -62,8 +55,8 @@ def resource_allocator_node(state: DAGState):
         f"Incident: {state['incident']}\n\n"
         f"Triage Report:\n{state['triage_report']}\n\n"
         "Based on the triage report, check availability for Fire and Medical responders. "
-        "Check hospital status. Dispatch the appropriate units (Fire Engine, Ambulances) and select the best hospital "
-        "if there are injuries. Summarize the allocations made."
+        "Check hospital status. Dispatch the appropriate units (Pumping Appliance, Double-Crewed Ambulance, "
+        "Rapid Response Vehicle) and select the best hospital if there are injuries. Summarize the allocations made."
     )
     
     response = model_with_tools.invoke([
@@ -104,7 +97,7 @@ def resource_allocator_node(state: DAGState):
 # 3. Traffic Coordinator Agent Node: Checks routing delays and dispatches police units
 def traffic_coordinator_node(state: DAGState):
     print("\n[DAG Pipeline] 👮 3. Traffic Coordinator: Checking roads & dispatching police...")
-    model = get_model()
+    model = get_llm()
     tools = [check_responder_availability, check_weather_and_traffic_hazards, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -113,12 +106,12 @@ def traffic_coordinator_node(state: DAGState):
         f"Triage Report:\n{state['triage_report']}\n\n"
         f"Dispatch Report:\n{state['dispatch_report']}\n\n"
         "Check weather and traffic hazards for the incident location. "
-        "Check availability and dispatch Police cruisers or Traffic Units to establish road blocks, "
+        "Check availability and dispatch Roads Policing Units or Response Cars to establish road closures, "
         "evacuation routes, or traffic control to assist responders. Summarize your findings and actions."
     )
     
     response = model_with_tools.invoke([
-        SystemMessage(content="You are the Traffic Coordinator. Check hazards and dispatch police cruisers."),
+        SystemMessage(content="You are the Traffic Coordinator. Check hazards and dispatch Roads Policing Units."),
         HumanMessage(content=prompt)
     ])
     
@@ -155,7 +148,7 @@ def traffic_coordinator_node(state: DAGState):
 # 4. Synthesizer Agent Node: Compiles the final report from the DAG pipeline
 def synthesizer_node(state: DAGState):
     print("\n[DAG Pipeline] ✍️ 4. Synthesizer: Merging pipeline data into final dispatch report...")
-    model = get_model(temperature=0.3)
+    model = get_llm(temperature=0.3)
     
     prompt = (
         f"Incident: {state['incident']}\n\n"

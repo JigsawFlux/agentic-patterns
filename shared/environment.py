@@ -1,54 +1,69 @@
 # shared/environment.py
 import json
 
+
 class EmergencyEnvironment:
     def __init__(self):
-        # In-memory mock databases representing emergency resources
+        # Fictional UK/NHS emergency response mock database.
+        # All organisation names, addresses, and personnel are invented.
+        # No connection to any real NHS trust, operational data, or real incident.
+
         self.responders = {
             "Fire": {
-                "Fire Engine": {"available": 5, "total": 8, "status": "Ready"},
-                "Hazmat Truck": {"available": 2, "total": 3, "status": "Ready"},
-                "Rescue Squad": {"available": 3, "total": 4, "status": "Ready"}
+                "Pumping Appliance": {"available": 3, "total": 5, "status": "Ready"},
+                "Aerial Ladder Platform": {"available": 1, "total": 2, "status": "Ready"},
+                "Incident Response Unit": {"available": 1, "total": 2, "status": "Ready"}
             },
             "Medical": {
-                "Ambulance": {"available": 6, "total": 12, "status": "Ready"},
-                "Paramedic Fly-Car": {"available": 4, "total": 5, "status": "Ready"}
+                "Double-Crewed Ambulance": {"available": 6, "total": 12, "status": "Ready"},
+                "Rapid Response Vehicle": {"available": 4, "total": 5, "status": "Ready"},
+                "HART Team": {"available": 1, "total": 1, "status": "Ready"}
             },
             "Police": {
-                "Cruiser": {"available": 10, "total": 15, "status": "Ready"},
-                "Traffic Unit": {"available": 5, "total": 6, "status": "Ready"},
-                "Tactical Van": {"available": 2, "total": 3, "status": "Ready"}
+                "Response Car": {"available": 8, "total": 12, "status": "Ready"},
+                "Roads Policing Unit": {"available": 3, "total": 4, "status": "Ready"},
+                "Armed Response Vehicle": {"available": 2, "total": 3, "status": "Ready"},
+                "Police Support Unit Van": {"available": 2, "total": 3, "status": "Ready"}
             }
         }
-        
+
         self.hospitals = {
-            "Mercy General": {
-                "available_beds": 12,
-                "trauma_center": True,
-                "burn_unit": False,
-                "distance_miles": 3.5,
-                "specialties": ["Trauma", "Cardiology"]
+            "Northgate University Hospital NHS Foundation Trust": {
+                "opel_level": 2,
+                "available_beds": 8,
+                "major_trauma_centre": True,
+                "burns_unit": True,
+                "burns_beds": 4,
+                "helicopter_pad": True,
+                "eta_mins": 12,
+                "specialties": ["Major Trauma", "Burns", "Neurosurgery", "Cardiothoracic"]
             },
-            "St. Jude Medical": {
-                "available_beds": 4,
-                "trauma_center": True,
-                "burn_unit": True,
-                "distance_miles": 7.2,
-                "specialties": ["Trauma", "Burn Unit", "Pediatrics"]
+            "St. Aldric's General Hospital NHS Foundation Trust": {
+                "opel_level": 1,
+                "available_beds": 18,
+                "major_trauma_centre": False,
+                "trauma_unit": True,
+                "burns_unit": False,
+                "helicopter_pad": False,
+                "eta_mins": 8,
+                "specialties": ["A&E", "Trauma", "Orthopaedics", "General Surgery"]
             },
-            "County Community": {
-                "available_beds": 25,
-                "trauma_center": False,
-                "burn_unit": False,
-                "distance_miles": 5.0,
-                "specialties": ["General Medicine"]
+            "Holborn Community Health Centre": {
+                "opel_level": 1,
+                "available_beds": 15,
+                "major_trauma_centre": False,
+                "minor_injuries_unit": True,
+                "burns_unit": False,
+                "helicopter_pad": False,
+                "eta_mins": 5,
+                "specialties": ["Minor Injuries", "Walk-in"]
             }
         }
-        
+
         self.hazards = {
-            "Mercy Hospital area": "Road construction on main approach, expect 10 min delay.",
-            "Downtown": "High traffic density around Main St.",
-            "North Highway": "Heavy rain causing slippery surface."
+            "High Holborn": "Severe congestion following road works near Holborn Circus. Expect 15+ min delay on standard approach.",
+            "Kingsway / Southampton Row junction": "Temporary traffic signals causing southbound queuing. Divert via Theobalds Road.",
+            "Gray's Inn Road": "Clear. Recommended Category 1 diversion route northbound from WC1B."
         }
 
         self.dispatched_log = []
@@ -62,8 +77,18 @@ class EmergencyEnvironment:
         if hospital_name == "all":
             return json.dumps(self.hospitals, indent=2)
         if hospital_name not in self.hospitals:
-            return f"Hospital '{hospital_name}' not found. Available: Mercy General, St. Jude Medical, County Community."
+            valid = ", ".join(self.hospitals.keys())
+            return f"Hospital '{hospital_name}' not found. Available: {valid}."
         return json.dumps(self.hospitals[hospital_name], indent=2)
+
+    def get_opel_interpretation(self, opel_level: int) -> str:
+        interpretations = {
+            1: "OPEL 1 — Normal operations. No escalation required.",
+            2: "OPEL 2 — Pressurised but operational. Monitor capacity closely.",
+            3: "OPEL 3 — Operating under sustained pressure. Divert non-critical patients where possible.",
+            4: "OPEL 4 — Extreme pressure. Declare internal major incident. Divert all non-critical patients immediately."
+        }
+        return interpretations.get(opel_level, "Unknown OPEL level.")
 
     def check_hazards(self, location: str) -> str:
         matched = []
@@ -71,21 +96,20 @@ class EmergencyEnvironment:
             if loc.lower() in location.lower() or location.lower() in loc.lower():
                 matched.append(f"{loc}: {desc}")
         if not matched:
-            return "No active road hazards or weather warnings for this location."
+            return "No active road hazards or weather warnings reported for this location."
         return "\n".join(matched)
 
     def dispatch(self, service: str, vehicle_type: str, units: int, location: str) -> str:
         if service not in self.responders:
             return f"Dispatch failed: Service '{service}' does not exist."
-        
+
         vehicles = self.responders[service]
         if vehicle_type not in vehicles:
             valid_types = ", ".join(vehicles.keys())
             return f"Dispatch failed: Vehicle type '{vehicle_type}' not found for {service}. Valid types: {valid_types}."
-        
+
         available = vehicles[vehicle_type]["available"]
         if available < units:
-            # Dispatch as many as available
             dispatched = available
             vehicles[vehicle_type]["available"] = 0
             vehicles[vehicle_type]["status"] = "No Units Available"
@@ -106,11 +130,12 @@ class EmergencyEnvironment:
             "location": location
         }
         self.dispatched_log.append(log_entry)
-        
+
         return (
             f"Dispatch Successful: Dispatched {dispatched} {vehicle_type}(s) from {service} "
             f"to '{location}'. (Requested: {units}, Remaining available: {vehicles[vehicle_type]['available']})"
         )
 
-# Global instance of environment to be imported and used by patterns
+
+# Global singleton — imported by all patterns; reset via env.__init__() between runs
 env = EmergencyEnvironment()

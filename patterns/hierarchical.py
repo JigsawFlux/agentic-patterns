@@ -1,10 +1,9 @@
 # patterns/hierarchical.py
-import os
 import json
 from typing import TypedDict, List, Annotated
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
@@ -20,17 +19,11 @@ class HierarchicalState(TypedDict):
     transcript: List[str]
     final_report: str
 
-def get_model(temperature=0.1):
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=temperature
-    )
 
 # 1. Supervisor Node: Orchestrates and routes to specialists
 def supervisor_node(state: HierarchicalState):
     print("\n[Hierarchical] 👑 Supervisor Node: Analyzing state and routing task...")
-    model = get_model()
+    model = get_llm()
     
     transcript_str = "\n".join(state.get("transcript", []))
     
@@ -67,13 +60,14 @@ def supervisor_node(state: HierarchicalState):
 # 2. Fire Specialist Node
 def fire_specialist_node(state: HierarchicalState):
     print("\n[Hierarchical] 🔥 Fire Specialist: Managing fire/hazmat assets...")
-    model = get_model()
+    model = get_llm()
     tools = [check_responder_availability, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
     prompt = (
         f"Incident: {state['incident']}\n\n"
-        "You are the Fire Dispatch Specialist. Check Fire resource availability and dispatch necessary Fire Engines or Hazmat Trucks. "
+        "You are the Fire Dispatch Specialist. Check Fire resource availability and dispatch necessary Pumping Appliances, "
+        "Aerial Ladder Platforms, or Incident Response Units as required. "
         "Report your findings and actions back to the Incident Commander. Write a brief report of your actions."
     )
     
@@ -116,7 +110,7 @@ def fire_specialist_node(state: HierarchicalState):
 # 3. Medical Specialist Node
 def medical_specialist_node(state: HierarchicalState):
     print("\n[Hierarchical] 🚑 Medical Specialist: Managing hospital routing & ambulance dispatch...")
-    model = get_model()
+    model = get_llm()
     tools = [check_responder_availability, query_hospital_status, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
@@ -164,14 +158,15 @@ def medical_specialist_node(state: HierarchicalState):
 # 4. Police Specialist Node
 def police_specialist_node(state: HierarchicalState):
     print("\n[Hierarchical] 👮 Police Specialist: Managing crowd control & road closures...")
-    model = get_model()
+    model = get_llm()
     tools = [check_responder_availability, check_weather_and_traffic_hazards, dispatch_resource]
     model_with_tools = model.bind_tools(tools)
     
     prompt = (
         f"Incident: {state['incident']}\n\n"
-        "You are the Police Dispatch Specialist. Check police cruiser availability, check for location traffic/hazards, "
-        "and dispatch police cruisers to manage traffic and evacuations. Write a brief report of your actions."
+        "You are the Police Dispatch Specialist. Check Roads Policing Unit and Response Car availability, "
+        "check for location traffic/hazards, and dispatch Roads Policing Units or Response Cars to manage traffic "
+        "and evacuations. Write a brief report of your actions."
     )
     
     response = model_with_tools.invoke([
@@ -224,7 +219,7 @@ def supervisor_router(state: HierarchicalState):
 # Synthesizer Node
 def synthesizer_node(state: HierarchicalState):
     print("\n[Hierarchical] ✍️ Synthesizer Phase: Merging department reports into a final master report...")
-    model = get_model(temperature=0.4)
+    model = get_llm(temperature=0.4)
     
     transcript_str = "\n\n".join(state["transcript"])
     

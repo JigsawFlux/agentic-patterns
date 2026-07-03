@@ -1,16 +1,17 @@
 # patterns/rewoo.py
-import os
 import json
 import re
 from typing import TypedDict, List, Dict, Annotated
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
     query_hospital_status,
     check_weather_and_traffic_hazards,
+    check_opel_level,
+    assess_news2_score,
     dispatch_resource
 )
 
@@ -21,17 +22,11 @@ class ReWOOState(TypedDict):
     tool_outputs: Dict[str, str]
     final_report: str
 
-def get_model():
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=0.1
-    )
 
 # 1. Planner Node: Creates the execution plan upfront without executing tools
 def planner_node(state: ReWOOState):
     print("\n[ReWOO] 📋 Planner Phase: Designing entire execution plan upfront...")
-    model = get_model()
+    model = get_llm()
     
     prompt = (
         f"You are a Dispatch Planner. Create a tool execution plan to address this incident:\n"
@@ -40,10 +35,16 @@ def planner_node(state: ReWOOState):
         "Use placeholder variables like '#E1' or '#E2' if you need the output of a prior step in a subsequent step's arguments, "
         "or write them out if you can anticipate them.\n\n"
         "Available tools:\n"
-        "- check_responder_availability(service: str)  [service must be Fire, Medical, or Police]\n"
+        "- check_responder_availability(service: str)  [service must be 'Fire', 'Medical', or 'Police']\n"
         "- query_hospital_status(hospital: str)        [hospital name or 'all']\n"
+        "- check_opel_level(hospital_name: str)        [check NHS Operational Pressures Escalation Level]\n"
+        "- assess_news2_score(patient_description: str)[NHS NEWS2 triage band for patient routing]\n"
         "- check_weather_and_traffic_hazards(location: str)\n"
         "- dispatch_resource(service: str, vehicle_type: str, units: int, location: str)\n\n"
+        "UK vehicle types for dispatch_resource:\n"
+        "  Fire: 'Pumping Appliance', 'Aerial Ladder Platform', 'Incident Response Unit'\n"
+        "  Medical: 'Double-Crewed Ambulance', 'Rapid Response Vehicle', 'HART Team'\n"
+        "  Police: 'Response Car', 'Roads Policing Unit', 'Armed Response Vehicle', 'Police Support Unit Van'\n\n"
         "Respond ONLY with a JSON array of steps in this format:\n"
         "[\n"
         "  {\n"
@@ -54,15 +55,15 @@ def planner_node(state: ReWOOState):
         "  },\n"
         "  {\n"
         '    "id": "E2",\n'
-        '    "task": "Check traffic hazards downtown",\n'
+        '    "task": "Check traffic hazards on High Holborn",\n'
         '    "tool": "check_weather_and_traffic_hazards",\n'
-        '    "args": {"location": "Downtown"}\n'
+        '    "args": {"location": "High Holborn"}\n'
         "  },\n"
         "  {\n"
         '    "id": "E3",\n'
-        '    "task": "Dispatch fire engine based on E1 availability",\n'
+        '    "task": "Dispatch Pumping Appliance to incident",\n'
         '    "tool": "dispatch_resource",\n'
-        '    "args": {"service": "Fire", "vehicle_type": "Fire Engine", "units": 2, "location": "Downtown"}\n'
+        '    "args": {"service": "Fire", "vehicle_type": "Pumping Appliance", "units": 2, "location": "14 Kingsbourne Terrace, WC1B 9ZZ"}\n'
         "  }\n"
         "]\n"
         "Return ONLY the raw JSON array (no markdown code blocks, no explanation text)."
@@ -98,27 +99,27 @@ def planner_node(state: ReWOOState):
             },
             {
                 "id": "E3",
-                "task": "Query hospital status",
+                "task": "Query all hospital status",
                 "tool": "query_hospital_status",
                 "args": {"hospital": "all"}
             },
             {
                 "id": "E4",
-                "task": "Check hazards at downtown",
+                "task": "Check hazards on High Holborn",
                 "tool": "check_weather_and_traffic_hazards",
-                "args": {"location": "Downtown"}
+                "args": {"location": "High Holborn"}
             },
             {
                 "id": "E5",
-                "task": "Dispatch Fire Engine to Downtown",
+                "task": "Dispatch Pumping Appliances to incident",
                 "tool": "dispatch_resource",
-                "args": {"service": "Fire", "vehicle_type": "Fire Engine", "units": 2, "location": "Downtown"}
+                "args": {"service": "Fire", "vehicle_type": "Pumping Appliance", "units": 2, "location": "14 Kingsbourne Terrace, WC1B 9ZZ"}
             },
             {
                 "id": "E6",
-                "task": "Dispatch Ambulance to Downtown",
+                "task": "Dispatch Double-Crewed Ambulance to incident",
                 "tool": "dispatch_resource",
-                "args": {"service": "Medical", "vehicle_type": "Ambulance", "units": 1, "location": "Downtown"}
+                "args": {"service": "Medical", "vehicle_type": "Double-Crewed Ambulance", "units": 2, "location": "14 Kingsbourne Terrace, WC1B 9ZZ"}
             }
         ]
         
@@ -139,6 +140,8 @@ def executor_node(state: ReWOOState):
         "check_responder_availability": check_responder_availability,
         "query_hospital_status": query_hospital_status,
         "check_weather_and_traffic_hazards": check_weather_and_traffic_hazards,
+        "check_opel_level": check_opel_level,
+        "assess_news2_score": assess_news2_score,
         "dispatch_resource": dispatch_resource
     }
     
@@ -178,7 +181,7 @@ def executor_node(state: ReWOOState):
 # 3. Solver Node: Takes plan and outputs to construct final response
 def solver_node(state: ReWOOState):
     print("\n[ReWOO] ✍️ Solver Phase: Compiling final summary report...")
-    model = get_model()
+    model = get_llm()
     
     # Format the plan and execution results for the solver
     run_log = []

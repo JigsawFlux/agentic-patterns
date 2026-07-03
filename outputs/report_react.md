@@ -1,67 +1,74 @@
-All dispatches confirmed successful. Here is the full structured incident summary.
+All units successfully dispatched. Full incident coordination summary follows.
 
 ---
 
-# 🚨 EMERGENCY DISPATCH SUMMARY
-## Incident: 3-Story Building Fire with Casualties
-**Location:** 45 Pine Street (WC1A Bloomsbury, London)
-
-**Time:** Active Response Initiated
+# 🚨 MULTI-AGENCY INCIDENT COORDINATION SUMMARY
+**Incident:** 3-Storey Building Fire with Casualties
+**Location:** 14 Kingsbourne Terrace, WC1B 9ZZ, London
+**Time of Coordination:** Active
+**Status:** ALL UNITS DISPATCHED ✅
 
 ---
 
-## 🔥 FIRE DEPARTMENT
+## 🔥 FIRE SERVICE — DISPATCHED
 | Vehicle | Units Dispatched | Purpose |
 |---|---|---|
-| Fire engine | 3 | Active fire suppression on all 3 floors |
-| Rescue Unit | 2 | Search & rescue of trapped occupants |
-
-> **Field Instructions:** Establish a unified command post at the corner of Pine Street. Anticipate multi-floor fire spread. Prioritize evacuation of upper floors. Coordinate with Medical for casualty handoff at a designated triage zone.
+| Pumping Appliance | 3 | Primary fire suppression — 3-storey structure |
+| Aerial Ladder Platform | 1 | Rescue from upper floors / elevated access |
+| Incident Response Unit | 1 | Command, hazmat, structural assessment |
+> ⚠️ **Note:** All available fire appliances are now committed to this incident. Duty Commander to flag for mutual aid if escalation occurs.
 
 ---
 
-## 🚑 MEDICAL / Ambulance Service
+## 🚑 MEDICAL SERVICE — DISPATCHED
 | Vehicle | Units Dispatched | Purpose |
 |---|---|---|
-| Ambulance | 4 | Transport of smoke inhalation & burn casualties |
-| Rapid Response Vehicle (RRV) | 2 | Advanced on-scene triage and critical stabilization |
-
-> **Field Instructions:** Establish a triage zone at a safe perimeter from the building. **Primary transport: Mercy General Hospital (3.5 mi)** — Trauma Center, 12 beds available. **Severe burn/smoke casualties: Route to St. Jude Medical (7.2 mi)** — has a dedicated Burn Unit. Avoid Main Street. due to confirmed traffic gridlock; use alternate corridors.
+| Double-Crewed Ambulance | 3 | Casualty transport to receiving hospitals |
+| Rapid Response Vehicle | 2 | Advanced paramedic first response / triage |
+| HART Team | 1 | Hazardous Area Response — smoke/chemical inhalation |
+> ⚠️ **Note:** The sole HART Team is now committed. No HART reserve available. Escalate to regional if further HART resource is required.
 
 ---
 
-## 👮 POLICE DEPARTMENT
+## 👮 POLICE SERVICE — DISPATCHED
 | Vehicle | Units Dispatched | Purpose |
 |---|---|---|
-| patrol car | 4 | Scene perimeter security & crowd control |
-| Traffic patrol | 3 | Emergency corridor clearance through city centre gridlock |
-
-> **Field Instructions:** Traffic patrols must immediately open a clear emergency lane through the Main Street. gridlock to ensure unobstructed ambulance routing. patrol cars to establish a hard perimeter around 45 Pine Street (WC1A Bloomsbury, London) and begin civilian evacuation of adjacent buildings.
-
----
-
-## 🏥 HOSPITAL ROUTING
-| Hospital | Role | Distance | Status |
-|---|---|---|---|
-| **Mercy General** | Primary — Trauma/Triage | 3.5 mi | ✅ 12 beds, Trauma Center |
-| **St. Jude Medical** | Secondary — Severe Burns | 7.2 mi | ✅ Burn Unit, 4 beds |
+| Response Car | 3 | Scene perimeter, public safety, access control |
+| Roads Policing Unit | 2 | Traffic management & emergency corridor creation |
+| Police Support Unit Van | 1 | Crowd control / cordon support |
 
 ---
 
-## ⚠️ ACTIVE HAZARDS
-- **Heavy traffic gridlock** confirmed on **Main Street., city centre** — Police Traffic patrols deployed to clear emergency corridors.
-- All units advised to use **alternate routes** to 45 Pine Street (WC1A Bloomsbury, London) until corridor is cleared.
+## 🏥 HOSPITAL ROUTING — CONFIRMED
+| Casualty Type | Receiving Hospital | Rationale |
+|---|---|---|
+| **Burns casualties** | ✅ **Northgate University Hospital NHS FT** | Only Burns Unit in network — **mandatory routing**. 4 burns beds available. ETA 12 mins. OPEL 2 (pressurised but operational). Pre-alert issued. |
+| **Severe smoke inhalation / major trauma** | ✅ **Northgate University Hospital NHS FT** | Major Trauma Centre. NEWS2 HIGH (7+). Pre-alert MTC team. Helicopter pad available if HEMS required. |
+| **Secondary trauma overflow (no burns)** | ✅ **St. Aldric's General Hospital NHS FT** | Trauma Unit, OPEL 1 (normal), 18 beds available, ETA 8 mins. Use if Northgate capacity is stressed. |
+| **Minor injuries** | ✅ **Holborn Community Health Centre** | Minor Injuries Unit, OPEL 1, ETA 5 mins. Suitable for walking wounded only. |
+
+> 🔴 **NEWS2 Risk Band: HIGH (Score 7+)** — All casualties with burns or respiratory compromise are to be treated as emergency priority. Northgate pre-alert is **ACTIVE**.
 
 ---
 
-## 📋 RESERVE RESOURCES ON STANDBY
-- 🔥 Fire: 2 Fire engines, 1 Rescue Unit, 2 hazardous materials Trucks (available if chemical/smoke hazard escalates)
-- 🚑 Medical: 2 Ambulances, 2 Rapid Response Vehicles (RRVs)
-- 👮 Police: 6 patrol cars, 2 Traffic patrols, 2 Tactical Vans
+## ⚠️ HAZARD & TRAFFIC ALERTS
+| Location | Hazard | Impact |
+|---|---|---|
+| **High Holborn** | Severe congestion — roadworks near Holborn Circus | **15+ minute delay** on standard approach routes |
 
-> **Note:** hazardous materials Trucks remain on standby pending confirmation of any toxic smoke or chemical accelerants in the building.
+### 🚦 Traffic Mitigation Instructions:
+- **Roads Policing Units** are to establish an emergency vehicle corridor immediately, bypassing High Holborn via **Kingsway / Southampton Row / Theobalds Road** as alternate approach routes.
+- All responding units to be advised of the High Holborn gridlock — **do not use as primary approach**.
+- Ambulances transporting to Northgate (ETA 12 mins) should route via **Gray's Inn Road northbound** to avoid Holborn Circus entirely.
 
 ---
 
-**All units are en route. Command is active. Situation is being monitored. 🚨**
+## 📋 FIELD COMMANDER INSTRUCTIONS
+1. **Fire:** Establish a 100m cordon. Pumping Appliances to attack from ground floor. ALP to address upper-floor rescue. IRU to assess structural integrity before committing crews to interior.
+2. **Medical:** HART Team to lead in the hot zone for smoke/inhalation casualties. RRVs to establish forward triage point. DCAs to stage at the cordon for transport.
+3. **Police:** Immediate scene cordon. RPUs to clear High Holborn approach and create a dedicated emergency lane. PSU Van to manage bystanders and support evacuation.
+4. **Hospital Liaison:** Pre-alert Northgate Burns Unit and MTC. Confirm bed status on second casualty wave. Monitor OPEL 2 — if Northgate escalates to OPEL 3, divert non-burns trauma to St. Aldric's immediately.
+5. **Escalation Trigger:** If further casualties are confirmed or structural collapse is suspected, request mutual aid for Fire and HART immediately — both are fully committed with zero reserve.
 
+---
+**Coordination Status: COMPLETE ✅ | All agencies deployed | Hospitals pre-alerted | Hazard mitigated**

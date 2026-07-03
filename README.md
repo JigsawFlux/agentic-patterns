@@ -49,17 +49,17 @@ This repository implements, demonstrates, and compares **8 core agentic patterns
 
 ### 👤 Single-Agent Patterns
 
-1. **ReAct (Reason + Act)**: A single agent that incrementally loops between reasoning and tool invocation ([react.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/react.py)).
-2. **Plan-and-Execute**: A planner agent generates a sequence of steps; an executor runs them, and a replanner reviews and adapts the plan as events unfold ([plan_execute.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/plan_execute.py)).
-3. **ReWOO (Reason Without Observation)**: An agent plans the entire chain of tool calls upfront with placeholder variables. The executor resolves them without intermediate LLM invocations, making it highly token-efficient ([rewoo.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/rewoo.py)).
-4. **Reflexion**: A generator agent proposes a dispatch plan, which a critic agent evaluates against strict protocols. The plan is iteratively refined based on critique until it passes safety checks ([reflexion.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/reflexion.py)).
+1. **ReAct (Reason + Act)**: A single agent that incrementally loops between reasoning and tool invocation ([react.py](patterns/react.py)).
+2. **Plan-and-Execute**: A planner agent generates a sequence of steps; an executor runs them, and a replanner reviews and adapts the plan as events unfold ([plan_execute.py](patterns/plan_execute.py)).
+3. **ReWOO (Reason Without Observation)**: An agent plans the entire chain of tool calls upfront with placeholder variables. The executor resolves them without intermediate LLM invocations, making it highly token-efficient ([rewoo.py](patterns/rewoo.py)).
+4. **Reflexion**: A generator agent proposes a dispatch plan, which a critic agent evaluates against strict protocols. The plan is iteratively refined based on critique until it passes safety checks ([reflexion.py](patterns/reflexion.py)).
 
 ### 👥 Multi-Agent Topologies
 
-5. **Hierarchical**: An Incident Commander (Supervisor) coordinates the operation by delegating specific issues to specialised Fire, Medical, and Police sub-agents who execute tools and report back ([hierarchical.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/hierarchical.py)).
-6. **Acyclic / DAG**: A unidirectional pipeline of specialised agents (`Triage` ──► `Resource Allocation` ──► `Traffic Coordinator` ──► `Compiler`) without loops ([dag.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/dag.py)).
-7. **Network (Peer-to-Peer)**: Specialised agents (`Fire Chief`, `Police Chief`, `Medical Chief`) negotiate coordinates and assets laterally in a conversational loop without central orchestrator oversight ([network.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/network.py)).
-8. **Consensus / Joint**: Three independent experts (`Threat Analyst`, `Resource Chief`, `Public Safety Liaison`) evaluate risk severity and debate their scores until they reach consensus or average agreement ([consensus.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/consensus.py)).
+5. **Hierarchical**: An Incident Commander (Supervisor) coordinates the operation by delegating specific issues to specialised Fire, Medical, and Police sub-agents who execute tools and report back ([hierarchical.py](patterns/hierarchical.py)).
+6. **Acyclic / DAG**: A unidirectional pipeline of specialised agents (`Triage` ──► `Resource Allocation` ──► `Traffic Coordinator` ──► `Compiler`) without loops ([dag.py](patterns/dag.py)).
+7. **Network (Peer-to-Peer)**: Specialised agents (`Fire Chief`, `Police Chief`, `Medical Chief`) negotiate coordinates and assets laterally in a conversational loop without central orchestrator oversight ([network.py](patterns/network.py)).
+8. **Consensus / Joint**: Three independent experts (`Threat Analyst`, `Resource Chief`, `Public Safety Liaison`) evaluate risk severity and debate their scores until they reach consensus or average agreement ([consensus.py](patterns/consensus.py)).
 
 ---
 
@@ -108,10 +108,12 @@ python run.py --pattern all --auto-approve
 
 ## 📁 Code Structure
 
-* [shared/environment.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/environment.py) — Stateful database representing responders (vehicles availability), hospitals (specialties and beds), hazards, and a dispatch logger.
-* [shared/tools.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/tools.py) — LangChain-decorated tools (`dispatch_resource`, `query_hospital_status`, etc.) acting on the stateful database.
-* [patterns/](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/) — Individual pattern graph definitions in LangGraph.
-* [run.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/run.py) — Main command-line orchestrator and telemetry logger.
+* [shared/environment.py](shared/environment.py) — Stateful database representing responders (vehicles availability), hospitals (specialties and beds), hazards, and a dispatch logger.
+* [shared/tools.py](shared/tools.py) — LangChain-decorated tools (`dispatch_resource`, `query_hospital_status`, `check_opel_level`, `assess_news2_score`, etc.) acting on the stateful database.
+* [shared/llm.py](shared/llm.py) — LLM factory (`get_llm(temperature)`). Returns `ChatAnthropic` or `ChatOllama` based on `LLM_PROVIDER` env var. All 8 patterns use this.
+* [shared/telemetry.py](shared/telemetry.py) — LangChain callback handler capturing token counts, latency, and estimated cost per pattern run.
+* [patterns/](patterns/) — Individual pattern graph definitions in LangGraph.
+* [run.py](run.py) — Main command-line orchestrator and telemetry logger.
 
 ---
 
@@ -130,7 +132,9 @@ agentic-patterns/
 ├── shared/
 │   ├── __init__.py
 │   ├── environment.py    # Stateful mock database of responders/hospitals
-│   └── tools.py          # LLM tools (dispatch, check_status, weather, query_db)
+│   ├── tools.py          # LLM tools (dispatch, check_status, weather, query_db, opel, news2)
+│   ├── llm.py            # LLM factory (ChatAnthropic / ChatOllama via LLM_PROVIDER)
+│   └── telemetry.py      # LangChain callback: token counts, latency, cost
 ├── patterns/
 │   ├── __init__.py
 │   ├── react.py          # Single-Agent: ReAct
@@ -149,60 +153,103 @@ agentic-patterns/
 ### ⚡ Telemetry & Verification Results
 
 All 8 patterns were executed on the following incident:
-> **Incident:** *"Report of a 3-story building fire at 45 Pine St (WC1A Bloomsbury, London) with smoke inhalation casualties and heavy traffic gridlock."*
+> **Incident:** *"Report of a 3-story building fire at 14 Kingsbourne Terrace (WC1B 9ZZ, London) with smoke inhalation casualties, possible burns, and severe traffic gridlock on High Holborn."*
 
 Below is the comparative summary of execution times and report complexities for each pattern:
 
-| Pattern | Paradigm / Topology | Verification Status | Report Size (chars) | Steps / Messages | Key Characteristics |
+| Pattern | Paradigm / Topology | Verification Status | Run Time (s) | Steps / Messages | Key Characteristics |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **ReAct** | Reason + Act Loop | ✅ Success | ~2,750 | 4 | Simple, direct loop interleaved with tool calls. |
-| **Plan-and-Execute** | Plan -> Do -> Replan | ✅ Success | ~20,560 | 24 | Highly detailed; dynamically replans based on feedback. |
-| **ReWOO** | Front-loaded Planning | ✅ Success | ~6,880 | 6 | Plans all tools upfront; executes them in one batch. |
-| **Reflexion** | Generate & Critique | ✅ Success (Refined Loop) | ~16,400 | 3 (Iterative) | Self-criticizes draft against strict safety protocols, refines until `PASS`. |
-| **Hierarchical** | Supervisor & Specialists | ✅ Success | ~17,790 | 4 | Supervisor routes tasks laterally to Fire/Med/Police. |
-| **Acyclic / DAG** | Directed Unidirectional | ✅ Success | ~13,310 | 3 | Triage ──► Allocation ──► Traffic ──► Compiler. |
-| **Network / P2P** | Direct Agent Dialogue | ✅ Success (Multi-turn) | ~24,840 | 6 (2 rounds) | Chiefs negotiate directly in multi-turn conversation. |
-| **Consensus** | Expert Debate & Vote | ✅ Success | ~10,620 | 3 | Multi-agent panel debates and votes on threat score. |
+| **ReAct** | Reason + Act Loop | ✅ Success | ~51 | 4 | Simple, direct loop interleaved with tool calls. |
+| **Plan-and-Execute** | Plan -> Do -> Replan | ⚠️ Cost-constrained | 943 (aborted) | 34+ | Replanning loop expanded 22-step plan indefinitely — consumed monthly API quota before completing. |
+| **ReWOO** | Front-loaded Planning | ✅ Success | ~65 | 19 | Plans all tools upfront; executes them in one batch. Token-efficient. |
+| **Reflexion** | Generate & Critique | ✅ Success (2 iterations) | ~728 | 3 iterations | Critic rejected REV 1 (only 3 Pumping Appliances — NFCC minimum is 4). REV 2 passed. |
+| **Hierarchical** | Supervisor & Specialists | ✅ Success | ~160 | 4 | Supervisor routes to Fire → Medical → Police specialists in sequence. |
+| **Acyclic / DAG** | Directed Unidirectional | ✅ Success | ~129 | 4 | Triage ──► Allocation ──► Traffic ──► Synthesizer. No feedback loops. |
+| **Network / P2P** | Direct Agent Dialogue | ✅ Success (2 rounds) | ~180 | 6 | Fire, Police, Medical chiefs negotiate directly in multi-turn conversation. |
+| **Consensus** | Expert Debate & Vote | ✅ Success | ~96 | 3 | All three experts independently scored 4/5 — unanimous first round. |
+
+> **⚠️ Plan-and-Execute note:** Two separate runs both hit API limits before completing (285s then 943s). The pattern's replanning loop expanded an initial 22-step plan to 34+ steps before termination. This is not a code defect — it is an accurate demonstration of the pattern's cost profile. For a METHANE-declared major incident, the replanner treats every new field report as grounds for another planning cycle. The output file `outputs/report_plan-and-execute.md` reflects a pre-UK-alignment run and is retained for structural reference only; do not use it as a current evidence report.
 
 ---
 
 ### 📝 Generated Output Reports
 
-The compiled Markdown reports for each pattern are saved in the [outputs/](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs) folder:
-1. **ReAct Report:** [outputs/report_react.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_react.md)
-2. **Plan-and-Execute Report:** [outputs/report_plan-and-execute.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_plan-and-execute.md)
-3. **ReWOO Report:** [outputs/report_rewoo.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_rewoo.md)
-4. **Reflexion Report (REV 3 Final):** [outputs/report_reflexion.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_reflexion.md) *(shows Iterations 1, 2, and 3 with full critique and compliance verification)*
-5. **Hierarchical Report:** [outputs/report_hierarchical.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_hierarchical.md)
-6. **Acyclic / DAG Report:** [outputs/report_acyclic_dag.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_acyclic_dag.md)
-7. **Network / P2P Report:** [outputs/report_network_p2p.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_network_p2p.md)
-8. **Consensus Report:** [outputs/report_consensus.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/outputs/report_consensus.md)
+The compiled Markdown reports for each pattern are saved in the [outputs/](outputs) folder:
+1. **ReAct Report:** [outputs/report_react.md](outputs/report_react.md)
+2. **Plan-and-Execute Report:** [outputs/report_plan-and-execute.md](outputs/report_plan-and-execute.md)
+3. **ReWOO Report:** [outputs/report_rewoo.md](outputs/report_rewoo.md)
+4. **Reflexion Report (REV 3 Final):** [outputs/report_reflexion.md](outputs/report_reflexion.md) *(shows Iterations 1, 2, and 3 with full critique and compliance verification)*
+5. **Hierarchical Report:** [outputs/report_hierarchical.md](outputs/report_hierarchical.md)
+6. **Acyclic / DAG Report:** [outputs/report_acyclic_dag.md](outputs/report_acyclic_dag.md)
+7. **Network / P2P Report:** [outputs/report_network_p2p.md](outputs/report_network_p2p.md)
+8. **Consensus Report:** [outputs/report_consensus.md](outputs/report_consensus.md)
 
 ---
 
 ### 🎯 Verification Accomplishments
-* **Reflexion Loop Fix:** We tightened `should_continue` in `patterns/reflexion.py` to check for exact `PASS` responses. On iteration 1, the critic withheld approval for a data discrepancy; the agent successfully modified the draft in iteration 2 and received a `PASS` to complete the loop.
-* **Network & Consensus Success:** Successfully ran multi-turn peer-to-peer dialogues and expert consensus threat evaluations to completion.
-* **Codebase Alignment:** Corrected spelling mistakes and cleaned formatting in the repository's [implementation-plan.md](implementation-plan.md).
+
+* **Reflexion critic caught a real protocol violation:** On iteration 1, the critic identified that only 3 Pumping Appliances were dispatched — the NFCC minimum for a multi-storey structural fire is 4. The generator corrected this in iteration 2 and received a `PASS`. This is exactly the pattern's value proposition: the self-critique loop catches gaps that a single-pass agent would miss.
+
+* **Consensus reached unanimous first-round agreement:** All three expert agents (Threat Analyst, Resource Chief, Public Safety Liaison) independently scored the incident 4/5, reaching consensus without a second debate round. The agreed finding — that the High Holborn gridlock was the single greatest escalation risk — emerged from three distinct analytical lenses converging on the same operational bottleneck.
+
+* **Plan-and-Execute revealed an important architectural limit:** Two separate runs on this incident both hit API usage limits before completing (285s then 943s). The pattern generated an initial 22-step plan, then its replanning loop expanded the plan to 34+ steps as each executed action surfaced new operational variables — utility isolation status, mutual aid ETAs, Forward Command Point confirmation. The replanner treated each new field update as grounds for another full planning cycle, with no inherent termination condition.
+
+  This is not a bug. It is the pattern behaving correctly — and it illustrates a fundamental trade-off: Plan-and-Execute is well-suited to **bounded tasks** (a defined goal, a finite set of unknowns, a clear done-state). A METHANE-declared major incident is the opposite: an open-ended, continuously evolving situation where new information arrives faster than the replanner can integrate it. For this domain, the pattern's adaptive replanning becomes a liability rather than an asset. ReWOO (which commits to a plan upfront and does not replan) completed the same incident in 65 seconds at a fraction of the cost.
+
+* **Network & Consensus ran multi-turn dialogues to completion** across 2 full negotiation rounds, with all three service chiefs making tool calls and updating their positions based on peer statements.
+
+* **UK/NHS domain alignment confirmed end-to-end:** All 7 successfully completed pattern outputs reference "14 Kingsbourne Terrace, WC1B 9ZZ", fictional NHS trust names, UK vehicle terminology (Pumping Appliance, Double-Crewed Ambulance, HART Team, Roads Policing Unit), OPEL levels, and NEWS2 scoring throughout.
 
 ---
 
-## 📌 Appendix: Roadmap / TODO (Gap Analysis)
+## ⚠️ Ethics, Safety & Limitations
 
-> **Status note:** This repository is an **MVP** — it currently proves the *architectural patterns* work end-to-end, using a paid frontier model (Anthropic Claude) against a simplified mock environment. It does **not yet** prove the project's second, arguably more important goal: that these patterns remain viable and safe when run on **low-cost, sovereign, or on-prem hardware** (e.g. Ollama-hosted open models), applied to a **genuine health / duty-of-care domain** rather than a generic dispatch simulation.
+> **This is a research simulator. It must never be used in or connected to a live production dispatch, NHS operational system, or any clinical decision interface.**
+
+### Fictional Scenario Disclaimer
+
+All scenario data in this repository is deliberately fictional with no connection to real events, addresses, people, or NHS operational data:
+
+- **Address:** "14 Kingsbourne Terrace, WC1B 9ZZ" — the street name is invented; the `ZZ` postcode suffix is unassigned in the Royal Mail system.
+- **NHS Trust names:** All trust names (e.g. "Northgate University Hospital NHS Foundation Trust", "St. Aldric's General Hospital NHS Foundation Trust") are invented. Any resemblance to real NHS organisations is coincidental.
+- **Incident data:** The scenario is a fictional construction for research and educational purposes only.
+
+### Limitations of the MVP
+
+1. **No real dispatch capability.** The tools in `shared/tools.py` operate on an in-memory mock database. They cannot and do not connect to any real emergency dispatch system, CAD (Computer Aided Dispatch) software, or NHS database.
+2. **LLM hallucination risk.** In high-stress or unusual incident variants, language models may produce plausible-sounding but clinically or operationally incorrect outputs — wrong hospital routing, incorrect resource counts, fabricated protocol references. All outputs must be reviewed by qualified professionals before any real-world use.
+3. **No persistent audit trail.** The current dispatch log is in-memory and resets between runs. This makes the MVP unsuitable for any real duty-of-care, compliance, or accountability purpose.
+4. **No PII handling.** The system does not redact personally identifiable information from prompts before sending them to hosted model APIs. Do not input real patient data, real addresses, or real operational information.
+5. **Non-deterministic outputs.** The same incident may produce different dispatch decisions across runs due to LLM temperature settings and model version changes.
+
+### Humanitarian Intent
+
+This project exists to help product owners, solution architects, and engineering teams understand the trade-offs between agentic architectures in high-stakes, duty-of-care domains — where the choice of pattern has direct implications for auditability, protocol compliance, and human oversight. It is a learning resource, not a product.
+
+---
+
+## 📌 Appendix: Roadmap / Gap Analysis
+
+> **Phase 1 (this repository)** proves that all 8 architectural patterns work end-to-end against a UK-aligned NHS emergency scenario, using Anthropic Claude, with an LLM factory for provider abstraction, per-run telemetry, and a human-in-the-loop gate.
+>
+> **Phase 2 (upcoming)** will prove that these patterns remain viable and safe on **sovereign / low-cost hardware** (local Ollama models, air-gapped environments) and in a **genuine clinical triage domain** (Care Act 2014, mental health crisis response) with a persistent audit trail that meets duty-of-care compliance requirements.
+
+---
+
+### ✅ Phase 1 — Completed
 
 ---
 
 ### 1. Provider abstraction (break the Anthropic lock-in)
 * **Checklist**:
-  - [ ] Introduce a `shared/llm.py` factory that returns a chat model based on an `LLM_PROVIDER` env var (`anthropic`, `ollama`, `bedrock`, etc.), instead of each `patterns/*.py` file hardcoding `ChatAnthropic`.
-  - [ ] Update `.env.example` with `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL` options.
-  - [ ] Refactor all 8 pattern files to use the factory instead of instantiating `ChatAnthropic` directly.
+  - [x] Introduce a `shared/llm.py` factory that returns a chat model based on an `LLM_PROVIDER` env var (`anthropic`, `ollama`, `bedrock`, etc.), instead of each `patterns/*.py` file hardcoding `ChatAnthropic`.
+  - [x] Update `.env.example` with `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL` options.
+  - [x] Refactor all 8 pattern files to use the factory instead of instantiating `ChatAnthropic` directly.
 
 * **Analysis**:
-  - **Current State**: Files like [react.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/react.py), [hierarchical.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/hierarchical.py), and [consensus.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/consensus.py) directly import `ChatAnthropic` from `langchain_anthropic` and instantiate it inside their nodes.
-  - **Critique**: This creates a tight dependency on Anthropic's SDK. If you switch to Ollama, Bedrock, or OpenAI, you would have to refactor all 8 files.
-  - **Transition/Alignment Strategy**: Create a new file [llm.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/llm.py) that acts as an LLM Factory:
+  - **Current State**: ✅ `shared/llm.py` exists and all 8 pattern files use `get_llm()`. Switching providers requires only a `.env` change.
+  - **Original Problem**: All 8 pattern files previously imported `ChatAnthropic` directly — switching LLM providers required editing every file.
+  - **Solution Implemented**: [llm.py](shared/llm.py) acts as an LLM Factory:
     ```python
     import os
     from langchain_core.language_models.chat_models import BaseChatModel
@@ -231,19 +278,25 @@ The compiled Markdown reports for each pattern are saved in the [outputs/](file:
 
 ### 2. Cost & resource telemetry
 * **Checklist**:
-  - [ ] Capture token usage (input/output) per LLM call and per pattern run.
-  - [ ] Add estimated $ cost per run (model-price-aware) to the comparison table in `run.py`.
-  - [ ] Add wall-clock latency per LLM call (not just total pattern time) to help compare local vs. hosted models.
+  - [x] Capture token usage (input/output) per LLM call and per pattern run.
+  - [x] Add estimated $ cost per run (model-price-aware) to the comparison table in `run.py`.
+  - [x] Add wall-clock latency per LLM call (not just total pattern time) to help compare local vs. hosted models.
 
 * **Analysis**:
-  - **Current State**: [run.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/run.py) only tracks total execution elapsed time. There is zero awareness of tokens consumed, LLM-specific latency vs. tool latency, or financial cost.
-  - **Critique**: Because some topologies (like *Plan-and-Execute* or *Reflexion*) run many recursive LLM turns, they are far more expensive than single-turn batches (like *ReWOO*). Comparing them strictly on output character size is misleading.
-  - **Transition/Alignment Strategy**: Implement a custom LangChain Callback Handler (subclassing `BaseCallbackHandler` from `langchain_core.callbacks`) in a new telemetry module.
-    - Have it capture:
-      - `on_llm_start`: Log wall-clock start time.
-      - `on_llm_end`: Calculate delta latency and extract token usage from `response.response_metadata` or `response.usage_metadata`.
-    - Calculate estimated cost based on a hardcoded pricing registry (e.g., Sonnet 3.5 input/output rates vs. local Ollama at $0.00).
-    - Accumulate these metrics globally or within the LangGraph State dict so the final summary table in [run.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/run.py) can display LLM Call Latency vs. Total Run Latency, Input / Output Token Counts, and Calculated Cost ($ USD).
+  - **Current State**: ✅ `shared/telemetry.py` (`TelemetryCallback`) captures input/output tokens, LLM call count, wall-clock latency per call, and estimated cost. `run.py` displays these alongside report size and step count in the final comparison table.
+  - **Original Problem**: `run.py` only tracked total elapsed time, making expensive recursive patterns (Reflexion, Plan-and-Execute) look comparable to token-efficient batch patterns (ReWOO).
+  - **Solution Implemented**: Custom LangChain `BaseCallbackHandler` in [telemetry.py](shared/telemetry.py) using `on_llm_start`/`on_llm_end` hooks. Pricing hardcoded for Sonnet 4.6 ($3/M input, $15/M output); Ollama runs at $0.00.
+
+---
+
+---
+
+### 🔜 Phase 2 — Upcoming
+
+> The Phase 2 goal is to answer: *"Do these patterns hold up outside a paid frontier model, outside a controlled demo domain, and under real audit requirements?"*  Three workstreams:
+> 1. **Sovereignty** — run all 8 patterns on local Ollama models; document where tool-calling degrades and which patterns survive.
+> 2. **Clinical domain depth** — extend the simulation beyond 999 fire/medical/police into Care Act 2014 triage (safeguarding, mental health crisis) where the stakes and terminology are materially different.
+> 3. **Audit & governance** — replace the in-memory dispatch log with a persistent audit trail; log every HITL approval/bypass with timestamp.
 
 ---
 
@@ -258,24 +311,21 @@ The compiled Markdown reports for each pattern are saved in the [outputs/](file:
   - **Critique**: Running agentic loops locally using open-weights models (like `Llama-3.1-8B` or `Qwen2.5-14B` via Ollama) presents a major challenge: Tool-calling capabilities are highly unstable compared to Claude 3.5 Sonnet. Patterns like *ReAct* and *Plan-and-Execute* will frequently fail if the model outputs malformed JSON for tool invocation arguments. Structured patterns like *ReWOO* (which isolates planning from execution) or *Reflexion* (which has a self-correcting critique loop) are actually much more resilient for smaller local models.
   - **Transition/Alignment Strategy**:
     - Add a `docs/sovereign_setup.md` explaining how to download Ollama, fetch models, and spin up the service.
-    - Provide fallback system prompts (specifically in [rewoo.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/rewoo.py) and [consensus.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/patterns/consensus.py)) that enforce JSON formatting using regular expressions or LangChain's `.with_structured_output` if a local model fails JSON constraints.
+    - Provide fallback system prompts (specifically in [rewoo.py](patterns/rewoo.py) and [consensus.py](patterns/consensus.py)) that enforce JSON formatting using regular expressions or LangChain's `.with_structured_output` if a local model fails JSON constraints.
 
 ---
 
 ### 4. Domain model aligned to UK health / duty-of-care
 * **Checklist**:
-  - [ ] Replace or extend the generic fire/police/hospital dispatch simulation with a UK-relevant duty-of-care scenario (e.g. safeguarding referral triage, mental health crisis response, adult social care duty desk), using believable terminology (NHS 111/999 triage codes, NEWS2 scores, safeguarding levels).
-  - [ ] Model realistic risk/priority categories and escalation thresholds relevant to duty-of-care decision-making.
+  - [x] Replace the generic fire/police/hospital dispatch simulation with UK-relevant terminology: UK vehicle names (Pumping Appliance, Double-Crewed Ambulance, HART Team, Roads Policing Unit, etc.), fictional NHS trust names, OPEL levels, NEWS2 scoring, and a fictional London WC1B address.
+  - [ ] Extend domain further to safeguarding referral triage, mental health crisis response, or adult social care duty desk (Care Act 2014 pathways). *(Deferred — Phase 2)*
 
 * **Analysis**:
-  - **Current State**: The database in [environment.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/environment.py) and the tools in [tools.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/tools.py) represent a generic fire, police, and hospital dispatch simulation (very US-centric terminology).
-  - **Critique**: Real safeguarding and NHS care desks do not operate like fire trucks. They deal with sensitive clinical triage, duty officers, social work investigations, and mental health crisis response.
-  - **Transition/Alignment Strategy**:
-    - Refactor [environment.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/environment.py) to represent UK public service entities:
-      - **Responders**: Crisis Resolution and Home Treatment (CRHT) Teams, Safeguarding Lead Officers, Approved Mental Health Professionals (AMHPs), Duty Social Workers, Rapid Response Nurses.
-      - **Hospitals**: NHS Trusts annotated with OPEL Levels (1–4 pressure rating), Psychiatric Ward beds, Acute Trauma capacity, and Ambulance handover delays.
-      - **Hazards**: Risk history warnings (e.g., household history of violence, medication non-compliance warnings) instead of road construction.
-    - Refactor [tools.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/tools.py) to align with Care Act 2014 Section 42 protocols, NHS clinical triage pathways (e.g., checking National Early Warning Scores [NEWS2]), and psychiatric referrals.
+  - **Current State (Phase 1 — done)**: ✅ `environment.py` now models UK Fire/Medical/Police vehicle types (Pumping Appliance, Double-Crewed Ambulance, HART Team, Roads Policing Unit, etc.), fictional NHS trusts with OPEL levels and burns unit beds, and fictional London WC1B geography. `tools.py` includes `check_opel_level` and `assess_news2_score` tools. All 8 pattern outputs now reference "14 Kingsbourne Terrace, WC1B 9ZZ" and NHS trust names throughout.
+  - **Phase 2 extension**: The emergency services domain is a starting point. Real NHS duty-of-care decisions (safeguarding referrals, mental health crisis response, adult social care) involve fundamentally different pathways:
+    - **Responders**: Crisis Resolution and Home Treatment (CRHT) Teams, Approved Mental Health Professionals (AMHPs), Duty Social Workers, Rapid Response Nurses.
+    - **Decision frameworks**: Care Act 2014 Section 42 safeguarding thresholds, mental health triage (MHA 1983 sections), and NHS Talking Therapies referral pathways — not fire suppression protocols.
+    - This extension is intentionally deferred to Phase 2 to keep the MVP focused and comparable.
 
 ---
 
@@ -298,15 +348,15 @@ The compiled Markdown reports for each pattern are saved in the [outputs/](file:
 
 ### 6. Open-source hygiene
 * **Checklist**:
-  - [ ] Add a `LICENSE` file (MIT/Apache-2.0) at the repo root.
-  - [ ] Add an "Ethics & Safety" section to this README describing the humanitarian intent, data-handling stance, and limitations of this MVP.
+  - [x] Add a `LICENSE` file (MIT) at the repo root — includes a safety disclaimer prohibiting connection to live production dispatch or clinical systems.
+  - [x] Add an "Ethics & Safety" section to this README describing the humanitarian intent, data-handling stance, and limitations of this MVP.
 
 * **Analysis**:
   - **Current State**: The repository is missing a legal license and an ethics policy.
   - **Critique**: Because this project demonstrates automated/autonomous dispatch software in medical and policing fields, it is critical to explicitly limit liability.
   - **Transition/Alignment Strategy**:
     - Add a standard LICENSE file (Apache-2.0 or MIT is recommended for open-source utility).
-    - Update [README.md](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/README.md) with an Ethics, Limitations & Safety Declaration:
+    - Update [README.md](README.md) with an Ethics, Limitations & Safety Declaration:
       - Clarify that the project is an experimental simulator and must never be connected to a live production dispatch or clinical decision interface.
       - Warn about hallucinations in LLM tool selection under extreme crisis variations.
 
@@ -318,9 +368,9 @@ If the decision is to execute on any of these roadmaps later, here is the sequen
 
 | Step | Goal / Phase | Action Items | Status |
 | :--- | :--- | :--- | :--- |
-| **Step 1** | **Abstraction** | Implement `shared/llm.py` factory and refactor the 8 files under `patterns/`. | ⏳ Pending |
-| **Step 2** | **Telemetry** | Write the LangChain callback handler in `shared/telemetry.py` and hook it into `run.py`. | ⏳ Pending |
+| **Step 1** | **Abstraction** | Implement `shared/llm.py` factory and refactor the 8 files under `patterns/`. | ✅ Completed |
+| **Step 2** | **Telemetry** | Write the LangChain callback handler in `shared/telemetry.py` and hook it into `run.py`. | ✅ Completed |
 | **Step 3** | **Local Setup** | Download Ollama, run `llama3.1` or `qwen2.5`, test the topologies, and optimize prompt parsing errors. | ✅ Completed (Verified on Intel NUC) |
-| **Step 4** | **Domain Alignment** | Rewrite [environment.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/environment.py) and [tools.py](file:///c:/Users/suresh.thomas/source/jigsawflux/agentic-patterns/shared/tools.py) to target the Care Act 2014 and NHS OPEL/NEWS2 domains. | ⏳ Pending |
-| **Step 5** | **Governance** | Replace the in-memory log with a persistent SQLite audit logger and implement a local PII regex redactor. | ⏳ Pending |
-| **Step 6** | **Hygiene** | Add the LICENSE file and complete the safety section of the README.md. | ⏳ Pending |
+| **Step 4** | **Domain Alignment** | UK vehicle names, fictional NHS trusts, OPEL levels, NEWS2 scoring, fictional WC1B address. | ✅ Completed (Phase 1 — emergency services domain) |
+| **Step 5** | **Governance** | Replace the in-memory log with a persistent SQLite audit logger and implement a local PII regex redactor. | ⏳ Pending (Phase 2) |
+| **Step 6** | **Hygiene** | Add the LICENSE file and Ethics & Safety section to README.md. | ✅ Completed |

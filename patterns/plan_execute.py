@@ -1,10 +1,9 @@
 # patterns/plan_execute.py
-import os
 import json
 from typing import TypedDict, List, Tuple, Annotated
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
+from shared.llm import get_llm
 
 from shared.tools import (
     check_responder_availability,
@@ -20,18 +19,11 @@ class PlanExecuteState(TypedDict):
     past_steps: List[Tuple[str, str]]
     final_report: str
 
-# Anthropic LLM helper
-def get_model():
-    return ChatAnthropic(
-        model=os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6"),
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
-        temperature=0.1
-    )
 
 # 1. Planner Node: Generates the initial plan
 def planner_node(state: PlanExecuteState):
     print("\n[Plan & Execute] 📋 Planning Phase: Generating step-by-step response plan...")
-    model = get_model()
+    model = get_llm()
     
     prompt = (
         f"You are a Tactical Emergency Dispatch Planner. Given the incident below, outline a step-by-step dispatch plan.\n"
@@ -76,7 +68,7 @@ def executor_node(state: PlanExecuteState):
     current_step = state["plan"][0]
     print(f"\n[Plan & Execute] ⚡ Execution Phase: Executing task: '{current_step}'")
     
-    model = get_model()
+    model = get_llm()
     tools = [
         check_responder_availability,
         query_hospital_status,
@@ -149,7 +141,7 @@ def replanner_node(state: PlanExecuteState):
         return {"final_report": "complete"}
     
     print("\n[Plan & Execute] 🔄 Replanning Phase: Reviewing progress and updating plan...")
-    model = get_model()
+    model = get_llm()
     
     history_str = "\n".join([f"Task: {step}\nOutcome: {outcome}" for step, outcome in state["past_steps"]])
     plan_str = "\n".join([f"- {step}" for step in state["plan"]])
@@ -193,7 +185,7 @@ def should_continue(state: PlanExecuteState):
 # 4. Synthesizer Node: Produces the final deployment summary
 def synthesizer_node(state: PlanExecuteState):
     print("\n[Plan & Execute] ✍️ Synthesizer Phase: Drafting final deployment report...")
-    model = get_model()
+    model = get_llm()
     
     history_str = "\n".join([f"Task: {step}\nOutcome: {outcome}" for step, outcome in state["past_steps"]])
     
